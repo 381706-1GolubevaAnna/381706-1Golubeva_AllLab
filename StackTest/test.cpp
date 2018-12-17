@@ -31,9 +31,9 @@ TEST(Stack, correct_order_of_return_values)
 	S.Put(3);
 	S.Put(4);
 	S.Put(5);
-	ASSERT_EQ(3, S.Get());
-	ASSERT_EQ(4, S.Get());
 	ASSERT_EQ(5, S.Get());
+	ASSERT_EQ(4, S.Get());
+	ASSERT_EQ(3, S.Get());
 }
 
 TEST(Stack, is_full_false)
