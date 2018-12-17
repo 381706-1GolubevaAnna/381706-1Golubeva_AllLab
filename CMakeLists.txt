@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 2.8) #Проверка версии CMake.
+cmake_minimum_required(VERSION 2.8) #ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГҐГ°Г±ГЁГЁ CMake.
 
-set(PROJECT_NAME 381706-1Golubeva_AllLAb) #Создаем обычную локальную переменную с именем проекта
-project(${PROJECT_NAME}) # Название проекта
+set(PROJECT_NAME 381706-1Golubeva_AllLab) #Г‘Г®Г§Г¤Г ГҐГ¬ Г®ГЎГ»Г·Г­ГіГѕ Г«Г®ГЄГ Г«ГјГ­ГіГѕ ГЇГҐГ°ГҐГ¬ГҐГ­Г­ГіГѕ Г± ГЁГ¬ГҐГ­ГҐГ¬ ГЇГ°Г®ГҐГЄГІГ 
+project(${PROJECT_NAME}) # ГЌГ Г§ГўГ Г­ГЁГҐ ГЇГ°Г®ГҐГЄГІГ 
 
 set(Exception Exception)
 
@@ -13,16 +13,16 @@ set(Queue Queue)
 set(QueueLib QueueLib)
 set(QueueTest QueueTest)
 
-set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Configs" FORCE) #Создается переменная CMAKE_CONFIGURATION_TYPES со значением "Debug;Release" и меткой/разделом Configs, переменная сохраниется в специальном файле доступном из всех файлов,
-if(NOT CMAKE_BUILD_TYPE) # проверка имеющихся у компилятора вариантов сборки
-  set(CMAKE_BUILD_TYPE Release) #Если нет то устанавливаем Release
+set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Configs" FORCE) #Г‘Г®Г§Г¤Г ГҐГІГ±Гї ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г Гї CMAKE_CONFIGURATION_TYPES Г±Г® Г§Г­Г Г·ГҐГ­ГЁГҐГ¬ "Debug;Release" ГЁ Г¬ГҐГІГЄГ®Г©/Г°Г Г§Г¤ГҐГ«Г®Г¬ Configs, ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г Гї Г±Г®ГµГ°Г Г­ГЁГҐГІГ±Гї Гў Г±ГЇГҐГ¶ГЁГ Г«ГјГ­Г®Г¬ ГґГ Г©Г«ГҐ Г¤Г®Г±ГІГіГЇГ­Г®Г¬ ГЁГ§ ГўГ±ГҐГµ ГґГ Г©Г«Г®Гў,
+if(NOT CMAKE_BUILD_TYPE) # ГЇГ°Г®ГўГҐГ°ГЄГ  ГЁГ¬ГҐГѕГ№ГЁГµГ±Гї Гі ГЄГ®Г¬ГЇГЁГ«ГїГІГ®Г°Г  ГўГ Г°ГЁГ Г­ГІГ®Гў Г±ГЎГ®Г°ГЄГЁ
+  set(CMAKE_BUILD_TYPE Release) #Г…Г±Г«ГЁ Г­ГҐГІ ГІГ® ГіГ±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬ Release
 endif()
 
-file(GLOB hdrs "*.h*") #Добавляем в переменную hdrs все файлы с расширением .h
-file(GLOB srcs "*.cpp") #Добавляем в переменную srcs все файлы с расширением .h
+file(GLOB hdrs "*.h*") #Г„Г®ГЎГ ГўГ«ГїГҐГ¬ Гў ГЇГҐГ°ГҐГ¬ГҐГ­Г­ГіГѕ hdrs ГўГ±ГҐ ГґГ Г©Г«Г» Г± Г°Г Г±ГёГЁГ°ГҐГ­ГЁГҐГ¬ .h
+file(GLOB srcs "*.cpp") #Г„Г®ГЎГ ГўГ«ГїГҐГ¬ Гў ГЇГҐГ°ГҐГ¬ГҐГ­Г­ГіГѕ srcs ГўГ±ГҐ ГґГ Г©Г«Г» Г± Г°Г Г±ГёГЁГ°ГҐГ­ГЁГҐГ¬ .h
 
 
-#add_executable(${PROJECT_NAME} ${srcs} ${hdrs}) #Создаем проект с именем из переменной ${PROJECT_NAME}, в него добавляются файлы из переменных ${srcs} и ${hdrs}
+#add_executable(${PROJECT_NAME} ${srcs} ${hdrs}) #Г‘Г®Г§Г¤Г ГҐГ¬ ГЇГ°Г®ГҐГЄГІ Г± ГЁГ¬ГҐГ­ГҐГ¬ ГЁГ§ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г®Г© ${PROJECT_NAME}, Гў Г­ГҐГЈГ® Г¤Г®ГЎГ ГўГ«ГїГѕГІГ±Гї ГґГ Г©Г«Г» ГЁГ§ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»Гµ ${srcs} ГЁ ${hdrs}
 
 #${CMAKE_CURRENT_SOURCE_DIR}
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/gtest)
@@ -41,4 +41,4 @@ add_subdirectory(Queue)
 add_subdirectory(QueueLib)
 add_subdirectory(QueueTest)
 
-#target_link_libraries(${PROJECT_NAME} ${MyLib1}) #Подключаем к проекту с именем ${PROJECT_NAME} библиотеку с именем ${MyLib1}
+#target_link_libraries(${PROJECT_NAME} ${MyLib1}) #ГЏГ®Г¤ГЄГ«ГѕГ·Г ГҐГ¬ ГЄ ГЇГ°Г®ГҐГЄГІГі Г± ГЁГ¬ГҐГ­ГҐГ¬ ${PROJECT_NAME} ГЎГЁГЎГ«ГЁГ®ГІГҐГЄГі Г± ГЁГ¬ГҐГ­ГҐГ¬ ${MyLib1}
