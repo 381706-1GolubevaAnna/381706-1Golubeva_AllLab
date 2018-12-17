@@ -9,5 +9,9 @@ script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
   - ./Vector/Vector
+  - ./Stack/Stack
+  - ./StackTest/StackTest
+  - ./Queue/Queue
+  - ./QueueTest/QueueTest
 notifications:
   email: false
