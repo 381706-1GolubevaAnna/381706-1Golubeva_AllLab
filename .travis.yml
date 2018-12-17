@@ -8,6 +8,9 @@ before_script:
 script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
-  - ./Vector/Vector
+  - ./Queue/Queue
+  - ./QueueTest/QueueTest
+  - ./Stack/Stack
+  - ./StackTest/StackTest
 notifications:
   email: false
