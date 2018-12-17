@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8) #Проверка версии CMake.
 
-set(PROJECT_NAME 381706-1_Mityagina_AllLabs) #Создаем обычную локальную переменную с именем проекта
+set(PROJECT_NAME 381706-1Golubeva_AllLab) #Создаем обычную локальную переменную с именем проекта
 project(${PROJECT_NAME}) # Название проекта
 
 set(Exception Exception)
