@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../StackLib/Stack.h"
-#include "../Exception/Exception.h"
+#include "Stack.h"
+#include "Exception.h"
 #include <locale.h>
 using namespace std;
 
@@ -10,25 +10,25 @@ int main()
 	try
 	{
 		int n;
-		cout << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ â ñòåêå\n";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð² ÑÑ‚ÐµÐºÐµ\n";
 		do
 			cin >> n;
 		while (n < 0);
 		TStack<int> stack(n);
 		int elem;
-		cout << "Ââåäèòå ýëåìåíòû ñòåêà\n";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ ÑÑ‚ÐµÐºÐ°\n";
 		for (int i = 0; i < n; i++)
 		{
 			cin >> elem;
 			stack.Put(elem);
 		}
-		cout << "\nÏå÷àòü ñòåêà íà ýêðàí\n";
+		cout << "\Ð’Ñ‹Ð²Ð¾Ð´ ÑÑ‚ÐµÐºÐ° Ð½Ð° ÑÐºÑ€Ð°Ð½\n";
 		stack.PrintStack();
-		cout << "\nÇàáðàòü ýëåìåíò èç ñòåêà\n";
+		cout << "\nÐ—Ð°Ð±Ñ€Ð°Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¸Ð· ÑÑ‚ÐµÐºÐ°\n";
 		stack.Get();
-		cout << "\nÏå÷àòü ñòåêà íà ýêðàí\n";
+		cout << "\nÐ’Ñ‹Ð²Ð¾Ð´ ÑÑ‚ÐµÐºÐ° Ð½Ð° ÑÐºÑ€Ð°Ð½\n";
 		stack.PrintStack();
-		cout << "\nÊîïèðóåì ñòåê\n";
+		cout << "\Ð¡ÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ ÑÑ‚ÐµÐº\n";
 		TStack<int> newStack(stack);
 		newStack.PrintStack();
 	}
