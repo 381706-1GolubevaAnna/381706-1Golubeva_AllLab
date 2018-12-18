@@ -5,9 +5,7 @@ project(${PROJECT_NAME}) # Название проекта
 
 set(Exception Exception)
 
-set(Stack Stack)
 set(StackLib StackLib)
-set(StackTest StackTest)
 
 set(Queue Queue)
 set(QueueLib QueueLib)
@@ -32,9 +30,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Exception)
 add_subdirectory(Exception)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/StackLib)
-add_subdirectory(Stack)
 add_subdirectory(StackLib)
-add_subdirectory(StackTest)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/QueueLib)
 add_subdirectory(Queue)
