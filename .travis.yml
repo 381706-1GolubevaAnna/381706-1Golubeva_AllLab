@@ -9,6 +9,5 @@ script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
   - ./StackTest/StackTest
-  - ./Stack/Stack
 notifications:
   email: false
