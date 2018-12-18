@@ -8,7 +8,7 @@ before_script:
 script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
-  - ./StackTest/StackTest
   - ./QueueTest/QueueTest
+  - ./Queue/Queue
 notifications:
   email: false
