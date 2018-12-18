@@ -9,6 +9,5 @@ script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
   - ./QueueTest/QueueTest
-  - ./Queue/Queue
 notifications:
   email: false
