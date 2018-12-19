@@ -10,7 +10,7 @@ int main()
   try
   {
     int n;
-    cout << "Введите количество элементов в очереди\n"
+    cout << "Введите количество элементов в очереди\n";
     cin >> n;
     TQueue<int> queue(n);
     int elem;
