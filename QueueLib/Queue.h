@@ -2,7 +2,7 @@
 #include "../StackLib/Stack.h"
 
 template <class T>
-class TQueue : protected TStack <T> 
+class TQueue : public TStack <T> 
 {
 protected:
 	int start;
@@ -15,6 +15,7 @@ public:
 	T Get();
 	bool IsFull();
 	bool IsEmpty();
+	void PrintQueue();
 };
 
 template <class T>
@@ -77,4 +78,15 @@ bool TQueue<T>::IsEmpty()
 		return true;
 	else
 		return false;
+}
+
+template <class T>
+void TQueue<T>::PrintQueue()
+{
+  for(int j=1;j<=count;j++)
+  {
+    for (int i = TStack<T>::top; ; i = (i + 1) % TStack<T>::size)
+    cout << "\t|" << TStack<T>::mas[i] << "|";
+  }
+  cout << endl;
 }
