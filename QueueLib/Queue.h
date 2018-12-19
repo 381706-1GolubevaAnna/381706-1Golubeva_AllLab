@@ -84,10 +84,10 @@ bool TQueue<T>::IsEmpty()
 template <class T>
 void TQueue<T>::PrintQueue()
 {
-  for(int j=1;j<=count;j++)
-  {
-    for (int i = TStack<T>::top; ; i = (i + 1) % TStack<T>::size)
-    cout << "\t|" << TStack<T>::mas[i] << "|";
-  }
-  cout << endl;
+  int i = TStack<T>::top;
+  for (int j = 1; j <= count; j++)
+	{
+	  i = (i + 1) % TStack<T>::size;
+		cout << "\t" << TStack<T>::mas[i] ";
+	}
 }
