@@ -112,5 +112,5 @@ template <class T>
 void TStack<T>::PrintStack()
 {
   for (int i = top - 1; i >= 0; i--)
-    cout << "\t|" << mas[i] << "|" << endl;
+    cout << "\t" << mas[i] << endl;
 }
