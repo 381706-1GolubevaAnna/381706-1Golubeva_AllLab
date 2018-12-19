@@ -3,19 +3,19 @@
 
 TEST(TQueue, can_create_queue_with_positive_size)
 {
-	ASSERT_NO_THROW(TQueue <int> Q(10));
+  ASSERT_NO_THROW(TQueue <int> Q(10));
 }
 
 TEST(Queue, throws_when_create_queue_with_negative_size)
 {
-	ASSERT_ANY_THROW(TQueue <int> Q(-10));
+  ASSERT_ANY_THROW(TQueue <int> Q(-10));
 }
 
 TEST(Queue, can_put_and_get)
 {
-	TQueue <int> Q(10);
-	Q.Put(1);
-	ASSERT_EQ(1, Q.Get());
+TQueue <int> Q(10);
+Q.Put(1);
+ASSERT_EQ(1, Q.Get());
 }
 TEST(TQueue, can_copy_queue)
 {
