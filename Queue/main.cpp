@@ -22,7 +22,7 @@ int main()
     }
     cout << "\nВывод очереди на экран\n";
     queue.PrintQueue();
-    cout << "\Скопировать очередь\n";
+    cout << "\nСкопировать очередь\n";
     TQueue <int> queue1(queue);
     queue1.PrintQueue();
     cout << "\nЗабрать элемент из очереди\n";
