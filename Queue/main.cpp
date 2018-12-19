@@ -7,8 +7,8 @@ using namespace std;
 int main()
 { 
   setlocale(LC_ALL, "Russian");
-	try
-	{
+  try
+  {
     int n;
     cout << "Введите количество элементов в очереди\n"
     cin >> n;
@@ -29,7 +29,7 @@ int main()
     queue.Get();
     cout << "\nВывод очереди на экран\n";
     queue.PrintQueue();
-	}
+  }
   catch (TException exception)
   {
     exception.Print();
