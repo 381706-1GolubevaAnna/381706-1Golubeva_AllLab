@@ -10,23 +10,23 @@ int main()
   try
   {
     int n;
-    cout << "Введите количество элементов в стеке\n";
+    cout << "Enter the number of elements in the stack\n";
     cin >> n;
     TStack<int> stack(n);
     int elem;
-    cout << "Введите элементы стека\n";
+    cout << "Enter the elements of the stack\n";
     for (int i = 0; i < n; i++)
     {
       cin >> elem;
       stack.Put(elem);
     }
-    cout << "\nВывод стека на экран\n";
+    cout <<endl;
     stack.PrintStack();
-    cout << "\nЗабрать элемент из стека\n";
+    cout << "\nGet the element of the stack\n";
     stack.Get();
-    cout << "\nВывод стека на экран\n";
+    cout <<endl;
     stack.PrintStack();
-    cout << "\nСкопировать стек\n";
+    cout << "\nCopy stack\n";
     TStack<int> newStack(stack);
     newStack.PrintStack();
   }
