@@ -20,13 +20,13 @@ int main()
       cin >> elem;
       stack.Put(elem);
     }
-    cout << "\Вывод стека на экран\n";
+    cout << "\nВывод стека на экран\n";
     stack.PrintStack();
     cout << "\nЗабрать элемент из стека\n";
     stack.Get();
     cout << "\nВывод стека на экран\n";
     stack.PrintStack();
-    cout << "\Скопировать стек\n";
+    cout << "\nСкопировать стек\n";
     TStack<int> newStack(stack);
     newStack.PrintStack();
   }
