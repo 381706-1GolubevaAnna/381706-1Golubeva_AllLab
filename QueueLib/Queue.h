@@ -8,7 +8,7 @@ protected:
 	int start;
 	int count;
 public:
-	TQueue(int n = 0);
+  TQueue(int n = 0);
 	TQueue(TQueue <T> &q);
 	virtual ~TQueue();
 	void Put(T a);
