@@ -26,7 +26,7 @@ int main()
     stack.Get();
     cout <<endl;
     stack.PrintStack();
-    cout << "\nCopy stack\n";
+    cout << "\nCopy the stack\n";
     TStack<int> newStack(stack);
     newStack.PrintStack();
   }
