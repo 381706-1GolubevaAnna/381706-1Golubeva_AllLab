@@ -2,7 +2,7 @@
 #include "../StackLib/Stack.h"
 
 template <class T>
-class TQueue : public TStack <T> 
+class TQueue : protected TStack <T> 
 {
 protected:
 	int start;
