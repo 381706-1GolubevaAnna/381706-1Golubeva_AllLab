@@ -10,12 +10,12 @@ class TQueue : public TStack <T>
   public:
   TQueue(int n = 0);
   TQueue(TQueue <T> &q);
-	virtual ~TQueue();
-	void Put(T a);
-	T Get();
-	bool IsFull();
-	bool IsEmpty();
-	void PrintQueue();
+  virtual ~TQueue();
+  void Put(T a);
+  T Get();
+  bool IsFull();
+  bool IsEmpty();
+  void PrintQueue();
 };
 
 template <class T>
@@ -42,39 +42,40 @@ void TQueue<T>::Put(T a)
   if (IsFull())
     throw TException("Error. Queue is full.");
   else 
-	{
-	  TStack<T>::mas[start] = a;
-	  start = (start + 1) % TStack<T>::size;
-	  count++;
-	}
+  {
+    TStack<T>::mas[start] = a;
+    start = (start + 1) % TStack<T>::size;
+    count++;
+  }
 }
 
 template <class T>
-T TQueue<T>::Get() {
+T TQueue<T>::Get()
+{
   if (IsEmpty())
     throw TException("Error.Queue is empty");
   else 
-	{
+  {
     T temp = TStack<T>::mas[TStack<T>::top];
     TStack<T>::top = (TStack<T>::top + 1) % TStack<T>::size;
     count--;
     return temp;
-	}
+  }
 }
 
 template <class T>
 bool TQueue<T>::IsFull() 
 {
-	if (count == TStack<T>::size)
-		return true;
-	else
-		return false;
+  if (count == TStack<T>::size)
+    return true;
+  else
+    return false;
 }
 
 template <class T>
 bool TQueue<T>::IsEmpty()
 {
-	if (count == 0)
+if (count == 0)
 		return true;
 	else
 		return false;
