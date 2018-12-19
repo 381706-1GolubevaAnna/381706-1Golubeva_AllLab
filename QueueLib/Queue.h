@@ -86,8 +86,8 @@ void TQueue<T>::PrintQueue()
 {
   int i = TStack<T>::top;
   for (int j = 1; j <= count; j++)
-	{
-	  i = (i + 1) % TStack<T>::size;
-		cout << "\t" << TStack<T>::mas[i] ";
-	}
+  {
+    i = (i + 1) % TStack<T>::size;
+    cout << "\t" << TStack<T>::mas[i];
+  }
 }
