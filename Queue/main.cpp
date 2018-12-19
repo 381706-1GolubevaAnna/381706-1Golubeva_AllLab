@@ -1,33 +1,29 @@
 #include <iostream>
 #include "../QueueLib/Queue.h"
 #include "Exception.h"
-#include <locale.h>
 using namespace std;
 
 int main()
 { 
-  setlocale(LC_ALL, "Russian");
   try
   {
     int n;
-    cout << "Введите количество элементов в очереди\n";
+    cout << "Enter the number of elements in the queue\n";
     cin >> n;
     TQueue<int> queue(n);
     int elem;
-    cout << "Введите элементы очереди\n";
+    cout << "Enter the elements of the queue\n";
     for (int i = 0; i < n; i++)
     {
       cin >> elem;
       queue.Put(elem);
     }
-    cout << "\nВывод очереди на экран\n";
     queue.PrintQueue();
-    cout << "\nСкопировать очередь\n";
+    cout << "\nCopy the queue\n";
     TQueue <int> queue1(queue);
     queue1.PrintQueue();
-    cout << "\nЗабрать элемент из очереди\n";
+    cout << "\nGet the element\n";
     queue.Get();
-    cout << "\nВывод очереди на экран\n";
     queue.PrintQueue();
   }
   catch (TException exception)
