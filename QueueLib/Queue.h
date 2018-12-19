@@ -75,10 +75,10 @@ bool TQueue<T>::IsFull()
 template <class T>
 bool TQueue<T>::IsEmpty()
 {
-if (count == 0)
-		return true;
-	else
-		return false;
+  if (count == 0)
+    return true;
+  else
+    return false;
 }
 
 template <class T>
