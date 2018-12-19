@@ -5,7 +5,8 @@
 using namespace std;
 
 int main()
-{   setlocale(LC_ALL, "Russian");
+{ 
+  setlocale(LC_ALL, "Russian");
 	try
 	{
 	int n;
@@ -13,7 +14,7 @@ int main()
 	cin >> n;
 	TQueue<int> queue(n);
 	int elem;
-	cout << "Введите элементы стека\n";
+	cout << "Введите элементы очереди\n";
 	for (int i = 0; i < n; i++)
 	{
 		cin >> elem;
