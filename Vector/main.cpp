@@ -1,6 +1,5 @@
 #include <iostream>
-#include <stdlib.h>
-#include "..//VectorLib/VectorLib.h"
+#include "../VectorLib/VectorLib.h"
 #include <locale.h>
 using namespace std;
 int main()
