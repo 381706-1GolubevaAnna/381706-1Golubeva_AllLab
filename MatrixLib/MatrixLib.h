@@ -26,9 +26,9 @@ public:
 template <class T>
 TMatrix<T> ::TMatrix(int n) : TVector<TVector<T>>(n)
 {
-		/*if (n < 0||n>10000)  
+		if (n < 0||n>10000)  
 			throw TException("Error. Negative or too large size of matrix.");*/
-		//else
+		else
 		{
 			for (int i = 0; i < n; i++)
 				this->vector[i] = TVector <T>(n - i);
@@ -63,26 +63,26 @@ TMatrix<T>& TMatrix<T>::operator=(TVector<TVector<T>> &A)
 template <class T>
 TMatrix<T> TMatrix<T>::operator+(TMatrix<T> &A)
 {
-	/*if (this->size!= A.size)
+	if (this->size!= A.size)
 		throw TException("Error. Different dimensions.");
-	else*/
+	else
 		return TVector<TVector<T>> :: operator+(A);
 }
 
 template <class T>
 TMatrix<T> TMatrix<T>::operator-(TMatrix<T> &A)
 {
-	/*if (this->size!= A.size)
+	if (this->size!= A.size)
 		throw TException("Error. Different dimensions.");
-	else*/
+	else
 		return TVector<TVector<T>> :: operator-(A);
 }
 
 template <class T>
 TMatrix<T> TMatrix<T>::operator*(TMatrix<T> &A)
 {
-	/*if (this->size!= A.size)
-		throw TException("Error. Different dimensions.");*/
+	if (this->size!= A.size)
+		throw TException("Error. Different dimensions.");
 	TMatrix <T> temp(this->size);
 	for (int i = 0; i <this->size; i++)
 		for (int j = i; j <this->size; j++)
@@ -92,12 +92,12 @@ TMatrix<T> TMatrix<T>::operator*(TMatrix<T> &A)
 		}
 	return temp;
 }
-
+/*
 template <class T>
 TMatrix<T> TMatrix<T>::operator/(TMatrix<T> &A)
 {
-	/*if (this->size!= A.size)
-		throw TException("Error. Different dimentions");*/
+	if (this->size!= A.size)
+		throw TException("Error. Different dimentions");
 	
 	int N = (*this).size;
 	double detChecking = 1;
@@ -105,8 +105,8 @@ TMatrix<T> TMatrix<T>::operator/(TMatrix<T> &A)
 	for (int i = 0; i < N; i++)
 		detChecking *= (*this).vector[i][0];
 
-	/*if (detChecking < 0.000001)
-		throw TException("Error. Cannot work with matrixes that have det = 0");*/
+	if (detChecking < 0.000001)
+		throw TException("Error. Cannot work with matrixes that have det = 0");
 
 	TMatrix <T> replicaMatr(A);
 	TMatrix <T> middleStepMatr(N);
@@ -136,6 +136,7 @@ TMatrix<T> TMatrix<T>::operator/(TMatrix<T> &A)
 	}
 	return ((*this) * middleStepMatr);
 }
+*/
 
 template <class FriendT>  
 istream& operator>>(istream &istr, TMatrix<FriendT> &A)
