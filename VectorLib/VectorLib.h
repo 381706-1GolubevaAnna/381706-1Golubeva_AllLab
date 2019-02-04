@@ -3,7 +3,6 @@
 #include <cmath>
 #include "../Exception/Exception.h"
 using namespace std;
-
 template <class T>
 class TVector 
 {
