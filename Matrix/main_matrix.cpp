@@ -1,18 +1,43 @@
 #include <iostream>
 #include "../MatrixLib/MatrixLib.h"
-#include <time.h>
-#include <locale.h>
-using namespace std;
+using namespace std;   
 int main()
-{   
-	setlocale(LC_ALL, "Russian");
-	cout << "Введите размер матрицы\n";
-	int n;
-	cin >> n;
-	TMatrix<int> _matrix(n);
-	cout << "Введите элементы матрицы\n";
-	cin >> _matrix;
-	cout << "\nВывод матрицы\n";
-	cout << _matrix <<endl; 
-	return 0;  
+{
+  try
+  {
+    TMatrix<int> A(2), B(2), res(2);
+    A[0][0] = 7;
+    A[0][1] = 2;
+    A[1][0] = 3;
+    A[1][1] = 6;
+    B[0][0] = 4;
+    B[0][1] = 3;
+    B[1][0] = 5;
+    B[1][1] = 3;  
+ 
+
+    cout << "A\n";
+    cout << A << endl;
+    cout << "B";
+    cout << B << endl;
+	  
+    res = A + B;
+    cout << "A + B" << endl << res << endl;
+
+    res = A - B;
+    cout << "A - B" << endl << res << endl;
+
+    res = A * B;
+    cout << "A * B" << endl << res << endl;
+
+    res = A / B;
+    cout << "A / B" << endl << res << endl;
+  }
+
+ catch (TException exception)
+  {
+    exception.Print();
+  }
+
+  return 0;
 }
