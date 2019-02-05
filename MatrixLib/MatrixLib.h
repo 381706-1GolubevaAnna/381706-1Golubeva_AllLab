@@ -4,13 +4,13 @@
 using namespace std;
 
 template <class T>
-class TMatrix :public TVector<TVector<T>> 
+class TMatrix :public TVector<TVector<T> > 
 {
 public:
   TMatrix(int n = 10);
   TMatrix(const TMatrix<T> &A);
-  TMatrix(const TVector<TVector<T>> &A);
-  TMatrix<T>& operator=(TVector<TVector<T>> &A);
+  TMatrix(const TVector<TVector<T> > &A);
+  TMatrix<T>& operator=(TVector<TVector<T> > &A);
   TMatrix operator +(TMatrix<T> &A);
   TMatrix operator -(TMatrix<T> &A);
   TMatrix operator*(TMatrix<T> &A);
@@ -22,7 +22,7 @@ public:
 };
 
 template <class T>
-TMatrix<T> ::TMatrix(int n) : TVector<TVector<T>>(n)
+TMatrix<T> ::TMatrix(int n) : TVector<TVector<T> >(n)
 {
   if (n < 0||n > 1000)  
     throw TException("Error. Negative or too large size of matrix.");*/
@@ -34,10 +34,10 @@ TMatrix<T> ::TMatrix(int n) : TVector<TVector<T>>(n)
 }
 
 template <class T>
-TMatrix<T>::TMatrix(const TMatrix<T> &A) :TVector<TVector<T>>(A) {}
+TMatrix<T>::TMatrix(const TMatrix<T> &A) :TVector<TVector<T> >(A) {}
 
 template <class T>
-TMatrix<T>::TMatrix(const TVector<TVector<T>> &A) : TVector<TVector<T>>(A) {}
+TMatrix<T>::TMatrix(const TVector<TVector<T>> &A) : TVector<TVector<T> >(A) {}
 
 template <class T>
 bool TMatrix<T>::operator==(const TMatrix<T> &A)
@@ -48,13 +48,13 @@ bool TMatrix<T>::operator==(const TMatrix<T> &A)
 template <class T>
 bool TMatrix<T>::operator!=(const TMatrix<T> &A)
 {
-  return TVector<TVector<T>>::operator!=(A);
+  return TVector<TVector<T> >::operator!=(A);
 }
 
 template <class T>
-TMatrix<T>& TMatrix<T>::operator=(TVector<TVector<T>> &A)
+TMatrix<T>& TMatrix<T>::operator=(TVector<TVector<T> > &A)
 {
-  TVector<TVector<T>>::operator=(A);
+  TVector<TVector<T> >::operator=(A);
   return *this;
 }
 
@@ -64,7 +64,7 @@ TMatrix<T> TMatrix<T>::operator+(TMatrix<T> &A)
   if (this->size!= A.size)
     throw TException("Error. Different dimensions.");
   else
-    return TVector<TVector<T>> :: operator+(A);
+    return TVector<TVector<T> > :: operator+(A);
 }
 
 template <class T>
@@ -73,7 +73,7 @@ TMatrix<T> TMatrix<T>::operator-(TMatrix<T> &A)
   if (this->size!= A.size);
     throw TException("Error. Different dimensions.");
   else
-    return TVector<TVector<T>> :: operator-(A);
+    return TVector<TVector<T> > :: operator-(A);
 }
 
 template <class T>
@@ -97,7 +97,7 @@ TMatrix<T> TMatrix<T>::operator/(TMatrix<T> &A)
   if (this->size!= A.size)
     throw TException("Error. Different dimentions");	
   TMatrix <T> copyA(A);
-  TMatrix <T> matr(N);
+  TMatrix <T> matr(this->size);
   for (int i = 0; i < this->size; i++)
   {
     matr[i][0] = 1;
