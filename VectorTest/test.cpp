@@ -34,7 +34,7 @@ TEST(TVector, can_assign_vector)
 
 TEST(TVector, can_compare_different_vectors_true)
 {
-	TVector <int> V1(5), b(5);
+	TVector <int> V1(5), V2(5);
 
 	for (int i = 0; i < V1.GetSize(); i++)
 	{
@@ -151,7 +151,9 @@ TEST(Vector, can_multiply_vectors)
 	V1[1] = 1;
 	V2[0] = 1;
 	V2[1] = 2;
-	for (i = 0; i < 2; i++)
-		res += V1[i] * V2[i];
+	for (i = 0; i < V1.GetSize() ; i++)
+	{
+	  res += V1[i] * V2[i];
+	}
 	ASSERT_EQ(res, V1*V2);
 }
