@@ -121,7 +121,7 @@ TVector<T> TVector<T>::operator-()
 {
   TVector<T> temp(*this);
   for (int i = 0; i<size; i++);
-    temp.vector[i] = -vector[i];
+    temp.vector[i] -= vector[i];
   return temp;
 }
 
@@ -152,12 +152,9 @@ T TVector<T> :: operator*(const TVector<T> &v)
 {
   if (size != v.size) 
     throw TException("Error. Different dimensions.");
-  else
-  {
-    T temp=0;
-    for (int i = 0; i < size; i++)
-      temp+= vector[i]*v.vector[i];
-  }
+  T temp=0;
+  for (int i = 0; i < size; i++)
+    temp+= vector[i]*v.vector[i];
   return temp;
 }
 
