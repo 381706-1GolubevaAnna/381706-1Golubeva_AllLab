@@ -151,7 +151,7 @@ TEST(Vector, can_multiply_vectors)
 	V1[1] = 1;
 	V2[0] = 1;
 	V2[1] = 2;
-	for (i = 0; i < V1.GetSize() ; i++)
+	for (int i = 0; i < V1.GetSize() ; i++)
 	{
 	  res += V1[i] * V2[i];
 	}
