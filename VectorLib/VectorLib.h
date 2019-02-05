@@ -121,7 +121,9 @@ TVector<T> TVector<T>::operator-()
 {
   TVector<T> temp(*this);
   for (int i = 0; i< size; i++);
+  { 
     temp.vector[i]= -vector[i];
+  }
   return temp;
 }
 
