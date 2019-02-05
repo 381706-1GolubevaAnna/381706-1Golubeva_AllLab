@@ -146,12 +146,13 @@ TEST(TVector, can_subtract_vectors)
 
 TEST(Vector, can_multiply_vectors)
 {
-	TVector<int> V1(2), V2(2), res(2);
+	TVector<int> V1(2), V2(2);
+	int res
 	V1[0] = 2;
 	V1[1] = 1;
 	V2[0] = 1;
 	V2[1] = 2;
-	for (int i = 0; i < 2; i++)
+	for (int i = 0; i < V1.GetSize(); i++)
 	{
 	  res[i] += V1[i] * V2[i];
 	}
