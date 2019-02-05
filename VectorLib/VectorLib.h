@@ -119,7 +119,7 @@ TVector<T> TVector<T>::operator+()
 template<class T>
 TVector<T> TVector<T>::operator-()
 {
-  Vector<T> temp(*this);
+  TVector<T> temp(*this);
   for (int i = 0; i<size; i++);
     temp.vector[i] = -vector[i];
   return temp;
