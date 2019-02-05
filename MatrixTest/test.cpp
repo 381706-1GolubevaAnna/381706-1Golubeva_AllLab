@@ -73,7 +73,7 @@ TEST(Matrix, can_subtract_matrices)
 		for (int j = 0; j < 2; j++)
 			m[i][j] = m1[i][j] - m2[i][j];
 	}
-	ASSERT_TRUE(MT == (M1 - M2));
+	ASSERT_TRUE(m == (m1 - m2));
 }
 
 
@@ -161,8 +161,8 @@ TEST(TMatrix, inequality_matrix_true)
 {
 	TMatrix <int> m1(3), m2(3);
 
-	for (int i = 0; i < m1.GetDlina(); i++)
-		for (int j = 0; j < m2.GetDlina() - i; j++)
+	for (int i = 0; i < m1.GetSize(); i++)
+		for (int j = 0; j < m2.GetSize() - i; j++)
 		{
 			m1[i][j] = i;
 			m2[i][j] = i + 1;
@@ -175,8 +175,8 @@ TEST(TMatrix, inequality_matrix_false)
 {
 	TMatrix <int> m1(3), m2(3);
 
-	for (int i = 0; i < m1.GetDlina(); i++)
-		for (int j = 0; j < m2.GetDlina() - i; j++)
+	for (int i = 0; i < m1.GetSize(); i++)
+		for (int j = 0; j < m2.GetSize() - i; j++)
 		{
 			m1[i][j] = i;
 			m2[i][j] = i;
