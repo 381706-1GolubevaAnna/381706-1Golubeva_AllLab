@@ -22,7 +22,7 @@ TEST(TVector, can_get_size)
 {
 	TVector<int> V(5);
 
-	EXPECT_EQ(3, V.GetSize());
+	EXPECT_EQ(5, V.GetSize());
 }
 
 TEST(TVector, can_assign_vector)
