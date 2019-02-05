@@ -103,7 +103,7 @@ TEST(TMatrix, can_multiply_matrices)
 	m[1][0] = 27;
 	m[1][1] = 16;
 
-	ASSERT_TRUE(m == m1 * m2);
+	ASSERT_TRUE(m == (m1 * m2));
 }
 
 TEST(Matrix, thorws_when_multiply_matrices_with_different_size)
