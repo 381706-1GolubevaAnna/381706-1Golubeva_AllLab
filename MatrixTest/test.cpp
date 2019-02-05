@@ -1,4 +1,4 @@
-#include "Matrix.h"
+"..//MatrixLib/MatrixLib.h"
 #include <gtest.h>
 
 TEST(TMatrix, can_create_matrix_with_positive_size)
