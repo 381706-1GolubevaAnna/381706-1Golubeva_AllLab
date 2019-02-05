@@ -24,9 +24,7 @@ public:
   TVector operator--(int); 
   TVector operator +(T h);
   TVector operator -(T h);
-  TVector operator *(T h);
-  TVector operator+(); 
-  TVector operator-(); 
+  TVector operator *(T h); 
   TVector operator +(const TVector<T> &v);
   TVector operator -(const TVector<T> &v);
   T operator *(const TVector<T> &v);
@@ -108,23 +106,6 @@ T& TVector<T> :: operator [](int n)
   else   
     throw TException("Error. Out of range.");
 
-}
-
-template<class T>
-TVector<T> TVector<T>::operator+() 
-{
-  return *this;
-}
-
-template<class T>
-TVector<T> TVector<T>::operator-()
-{
-  TVector<T> temp(*this);
-  for (int i = 0; i< size; i++);
-  { 
-    temp.vector[i]= -vector[i];
-  }
-  return temp;
 }
 
 template <class T>
