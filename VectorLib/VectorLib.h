@@ -171,9 +171,9 @@ TVector<T> TVector<T> :: operator* (T h)
 template<class T>
 bool TVector<T> ::operator==(const TVector<T> &v)
 {
-  if (size == v.size)
+  if (size == v.GetSize())
   {
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < this->size; i++)
     {
       if (this->vector[i] != v.vector[i])
         return 0;
