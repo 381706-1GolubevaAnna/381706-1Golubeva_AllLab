@@ -153,7 +153,7 @@ TEST(Vector, can_multiply_vectors)
 	V2[1] = 2;
 	for (int i = 0; i < V1.GetSize() ; i++)
 	{
-	  res += V1[i] * V2[i];
+	  res[i] += V1[i] * V2[i];
 	}
 	ASSERT_EQ(res, V1*V2);
 }
