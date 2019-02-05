@@ -13,8 +13,8 @@ public:
   TVector<T>(int size = 0);
   TVector<T>(const TVector<T> &v);
   virtual ~TVector<T>();
-  bool operator==(const TVector<T> &v);
-  bool operator!=(const TVector<T> &v);
+  bool operator==(const TVector<T> &v) const;
+  bool operator!=(const TVector<T> &v) const;
   TVector& operator=(const TVector<T> &v);
   virtual T& operator [](int n);
   int GetSize();
@@ -169,25 +169,21 @@ TVector<T> TVector<T> :: operator* (T h)
 }
 
 template<class T>
-bool TVector<T> ::operator==(const TVector<T> &v)
+bool TVector<T> ::operator==(const TVector<T> &v) const
 {
-  if (size == v.GetSize())
-  {
-    for (int i = 0; i < this->size; i++)
-    {
-      if (this->vector[i] != v.vector[i])
+  if (size != v.size)
+		return 0;
+	else
+		for (int i = 0; i < size; i++)
+			if (vector[i] != v.vector[i])
+			{
         return 0;
-    }
-  }
-  else
-  {
-    return 0;
-  }
-  return 1;
+			}
+	return 1;
 }
 
 template <class T>
-bool TVector<T> :: operator!=(const TVector<T> &v)
+bool TVector<T> :: operator!=(const TVector<T> &v) const
 {
   return !(*this == v);
 }
