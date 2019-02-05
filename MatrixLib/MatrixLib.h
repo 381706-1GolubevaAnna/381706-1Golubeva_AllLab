@@ -70,10 +70,11 @@ TMatrix<T> TMatrix<T>::operator+(TMatrix<T> &A)
 template <class T>
 TMatrix<T> TMatrix<T>::operator-(TMatrix<T> &A)
 {
-  if (this->size!= A.size);
-    throw TException("Error. Different dimensions.");
-  else
+  if (this->size= A.size)
     return TVector<TVector<T> > :: operator-(A);
+  else
+    throw TException("Error. Different dimensions.");
+ 
 }
 
 template <class T>
