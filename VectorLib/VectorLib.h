@@ -41,7 +41,7 @@ TVector<T> ::TVector(int n)
   if (n < 0)
     throw TException("Error. Negative size.");
   else 
-    if (n == 0)
+  if (n == 0)
     {
       size = 0;
       vector = NULL;
@@ -120,8 +120,8 @@ template<class T>
 TVector<T> TVector<T>::operator-()
 {
   TVector<T> temp(*this);
-  for (int i = 0; i<size; i++);
-    temp.vector[i] -= vector[i];
+  for (int i = 0; i< size; i++);
+    temp.vector[i]= -vector[i];
   return temp;
 }
 
