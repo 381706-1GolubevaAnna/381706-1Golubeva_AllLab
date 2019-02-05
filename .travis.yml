@@ -9,7 +9,6 @@ script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
   - ./VectorTest/VectorTest
-  - ./Matrix/Matrix
   - ./MatrixTest/MatrixTest
 notifications:
   email: false
