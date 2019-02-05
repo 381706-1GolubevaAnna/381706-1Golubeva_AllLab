@@ -25,7 +25,7 @@ template <class T>
 TMatrix<T> ::TMatrix(int n) : TVector<TVector<T> >(n)
 {
   if (n < 0||n > 1000)  
-    throw TException("Error. Negative or too large size of matrix.");*/
+    throw TException("Error. Negative or too large size of matrix.");
   else
   {
     for (int i = 0; i < n; i++)
@@ -37,12 +37,12 @@ template <class T>
 TMatrix<T>::TMatrix(const TMatrix<T> &A) :TVector<TVector<T> >(A) {}
 
 template <class T>
-TMatrix<T>::TMatrix(const TVector<TVector<T>> &A) : TVector<TVector<T> >(A) {}
+TMatrix<T>::TMatrix(const TVector<TVector<T> > &A) : TVector<TVector<T> >(A) {}
 
 template <class T>
 bool TMatrix<T>::operator==(const TMatrix<T> &A)
 {
-  return TVector<TVector<T>>::operator==(A);
+  return TVector<TVector<T> >::operator==(A);
 }
 
 template <class T>
