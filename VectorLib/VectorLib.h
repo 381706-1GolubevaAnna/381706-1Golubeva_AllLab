@@ -172,14 +172,14 @@ template<class T>
 bool TVector<T> ::operator==(const TVector<T> &v) const
 {
   if (size != v.size)
-		return 0;
-	else
-		for (int i = 0; i < size; i++)
-			if (vector[i] != v.vector[i])
-			{
-        return 0;
-			}
-	return 1;
+    return 0;
+  else
+  for (int i = 0; i < size; i++)
+    if (vector[i] != v.vector[i])
+    {
+      return 0;
+    }
+   return 1;
 }
 
 template <class T>
