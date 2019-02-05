@@ -1,5 +1,5 @@
 #include <gtest.h>
-#include "../VectorLib/Vectorlib.h"
+#include "../VectorLib/VectorLib.h"
 
 TEST(TVector, can_create_vector_with_positive_size)
 {
