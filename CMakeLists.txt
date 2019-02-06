@@ -3,15 +3,9 @@ cmake_minimum_required(VERSION 2.8) #Проверка версии CMake.
 set(PROJECT_NAME 381706-1Golubeva_AllLab) #Создаем обычную локальную переменную с именем проекта
 project(${PROJECT_NAME}) # Название проекта
 
-set(Exception Exception)
-
-set(Stack Stack)
-set(StackLib StackLib)
-set(StackTest StackTest)
-
-set(Queue Queue)
-set(QueueLib QueueLib)
-set(QueueTest QueueTest)
+set(List List)
+set(ListLib ListLib) 
+set(ListTest ListTest)
 
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Configs" FORCE) #Создается переменная CMAKE_CONFIGURATION_TYPES со значением "Debug;Release" и меткой/разделом Configs, переменная сохраниется в специальном файле доступном из всех файлов,
 if(NOT CMAKE_BUILD_TYPE) # проверка имеющихся у компилятора вариантов сборки
@@ -28,15 +22,7 @@ file(GLOB srcs "*.cpp") #Добавляем в переменную srcs все 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/gtest)
 add_subdirectory(gtest)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Exception)
-add_subdirectory(Exception)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/StackLib)
-add_subdirectory(Stack)
-add_subdirectory(StackLib)
-add_subdirectory(StackTest)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/QueueLib)
-add_subdirectory(Queue)
-add_subdirectory(QueueLib)
-add_subdirectory(QueueTest)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ListLib)
+add_subdirectory(List)
+add_subdirectory(ListLib)
+add_subdirectory(ListTest)
