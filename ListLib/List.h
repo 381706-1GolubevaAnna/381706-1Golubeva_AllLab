@@ -168,7 +168,7 @@ inline void TList<T>::Print()
 		}
 		cout << a->GetData() << " ";
 	}
-
+}
 template <class T>
 bool TList<T>::IsFull()
 {
