@@ -24,20 +24,17 @@ TEST(TMatrix, can_copy_matrix)
 
 	ASSERT_NO_THROW(TMatrix<int> Matr(m));
 }
-/*
+
 TEST(Matrix, can_assign_matrix)
 {
-	TMatrix <int> m1(3), m2(3), m3(3);
+	TMatrix<int> m1(3), m2(3), m3(3);
 	
   m1[0][1] = 1;
-  m1[1][0] = 2;
   m3[0][1] = 1;
-  m3[1][0] = 2;
   m2 = m1;
-  
   EXPECT_EQ(m3, m2);
 }
-*/
+
 TEST(Matrix, can_add_matrices)
 {
 	TMatrix <int> m1(2), m2(2), m(2);
