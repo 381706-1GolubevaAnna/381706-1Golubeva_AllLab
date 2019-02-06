@@ -83,8 +83,8 @@ TEST(List, can_get_begin)
 TEST(List, can_get_end)
 {
 	TList<int> L;
-	list.PutBegin(1);
-	list.PutBegin(2);
+	L.PutBegin(1);
+	L.PutBegin(2);
 
 	ASSERT_EQ(L.GetEnd(), 1);
 }
