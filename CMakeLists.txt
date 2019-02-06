@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 2.8) #Проверка версии CMake.
 set(PROJECT_NAME 381706-1Golubeva_AllLab) #Создаем обычную локальную переменную с именем проекта
 project(${PROJECT_NAME}) # Название проекта
 
+set(Exception Exception)
+
 set(List List)
 set(ListLib ListLib) 
 set(ListTest ListTest)
@@ -17,6 +19,9 @@ file(GLOB srcs "*.cpp") #Добавляем в переменную srcs все 
 
 
 #add_executable(${PROJECT_NAME} ${srcs} ${hdrs}) #Создаем проект с именем из переменной ${PROJECT_NAME}, в него добавляются файлы из переменных ${srcs} и ${hdrs}
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Exception)
+add_subdirectory(Exception)
 
 #${CMAKE_CURRENT_SOURCE_DIR}
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/gtest)
