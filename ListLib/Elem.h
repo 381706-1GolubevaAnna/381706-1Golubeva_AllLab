@@ -48,7 +48,7 @@ TElem<T>* TElem<T>::GetNext()
 template <class T>
 void TElem<T>::SetData(T _data)
 {
-	data = Elem;
+	data = _data;
 }
 
 template <class T>
