@@ -27,9 +27,15 @@ TEST(TMatrix, can_copy_matrix)
 
 TEST(Matrix, can_assign_matrix)
 {
-  TMatrix <int> V1(3), V2(3);
-  V1 = V2;
-  ASSERT_TRUE(V1 == V2);
+  TMatrix<int> m1(3);
+  TMatrix<int> m2(3);
+  TMatrix<int> m3(3);
+  m1[0][0] = 1;
+  m1[0][1] = 2;
+  m3[0][0] = 1;
+  m3[0][0] = 2;
+  m2 = m1;
+  EXPECT_EQ(m3, m2);
 }
 
 TEST(Matrix, can_add_matrices)
