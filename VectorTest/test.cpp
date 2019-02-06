@@ -51,7 +51,7 @@ TEST(TVector, can_compare_vector_true)
   ASSERT_TRUE(V1 == V2);
 }
 //-----------------------------------------------------------------------
-TEST(TVector, compare_vector_with_itself_return_false)
+TEST(TVector, can_copmare_vectore_false)
 {
 	TVector<int> V1(3), V2(3);
 
@@ -61,7 +61,7 @@ TEST(TVector, compare_vector_with_itself_return_false)
 		V2[i] = 2;
 	}
 
-	ASSERT_FALSE(a == a1);
+	ASSERT_FALSE(V1 == V2);
 }
 
 
