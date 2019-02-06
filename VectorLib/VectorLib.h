@@ -84,18 +84,14 @@ int TVector<T>::GetSize()
 template <class T>
 TVector<T> & TVector<T> ::operator =(const TVector<T> &v)
 {
-  if (this != &v)
-  {
-    if (size != v.size)
-    {
-      delete[] vector;
-      vector = new T[v.size];
-    }
-    size = v.size;
-    for (int i = 0; i < size; i++)
-      vector[i] = v.vector[i];
-  }
-  return *this;
+ if (this == &v)
+	return *this;
+ delete[] vector;
+ size=v.size;
+ vector = new T[size];
+for (int i = 0; i < size; i++)
+	(*this)[i] = v.vector[i];
+return *this;
 }
 
 template <class T>
