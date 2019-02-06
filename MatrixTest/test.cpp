@@ -27,9 +27,6 @@ TEST(TMatrix, can_copy_matrix)
 
 TEST(Matrix, can_assign_matrix)
 {
-  
-TEST(Matrix, can_assign_matrix)
-{
   TMatrix <int> m1(2), m2(3);
   m1 = m2;
   ASSERT_TRUE(m1 == m2);
