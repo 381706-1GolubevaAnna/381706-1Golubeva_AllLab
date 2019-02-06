@@ -29,8 +29,8 @@ TEST(Matrix, can_assign_matrix)
 {
 	TMatrix<int> m1(3), m2(3), m3(3);
 	
-  m1[0][1] = 1;
-  m3[0][1] = 1;
+  m1[1][1] = 1;
+  m3[1][1] = 1;
   m2 = m1;
   EXPECT_EQ(m3, m2);
 }
