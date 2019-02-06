@@ -32,7 +32,7 @@ TEST(Matrix, can_assign_matrix)
   m1[0][1] = 1;
 	m1[1][0] = 2;
   m3[0][1] = 1;
-	m3[1][0] = 2
+	m3[1][0] = 2;
   m2 = m1;
   
   EXPECT_EQ(m3, m2);
