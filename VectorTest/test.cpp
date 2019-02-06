@@ -32,6 +32,39 @@ TEST(TVector, can_assign_vector)
 	ASSERT_NO_THROW(V1 == V2);
 }
 
+TEST(Vector, can_use_index_operator)
+{
+  TVector <int> V(2);
+  V[0] = 1;
+  int temp = V[0] + 1;
+  ASSERT_EQ(2, temp);
+}
+
+TEST(TVector, can_compare_vector_true) 
+{
+  TVector<int> V1(3), V2(3);
+  for (int i = 0; i < V1.GetSize(); i++) 
+  {
+    V1[i] = 1;
+    V2[i] = 1;
+  }
+  ASSERT_TRUE(V1 == V2);
+}
+//-----------------------------------------------------------------------
+TEST(TVector, compare_vector_with_itself_return_false)
+{
+	TVector<int> V1(3), V2(3);
+
+	for (int i=0; i < V1.GetSize() ; i++)
+	{
+		V1[i] = 1;
+		V2[i] = 2;
+	}
+
+	ASSERT_FALSE(a == a1);
+}
+
+
 TEST(TVector, can_compare_different_vectors_true)
 {
 	TVector <int> V1(5), V2(5);
@@ -142,8 +175,6 @@ TEST(TVector, can_subtract_vectors)
 	res[1] = V1[1] - V2[1];
 	ASSERT_TRUE((V1 - V2) == res);
 }
-
-
 TEST(Vector, can_multiply_vectors)
 {
 	TVector<int> V1(2), V2(2);
