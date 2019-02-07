@@ -18,7 +18,9 @@ public:
 	int GetSize();     
 	bool IsFull();
 	bool IsEmpty();
-	void Print(); 
+	void Print();
+	void Put(int n, T A);
+	T Get(int n);
 	void PutBegin(T A);    
 	void PutEnd(T A);       
 	T GetBegin();               
@@ -70,6 +72,53 @@ int TList<T>::GetSize()
 	return size;
 }
 
+template<class T>
+void TList<T>::Put(int n, T A)
+{
+  if (this->IsFull())
+    throw TException("Error. List is full.");
+  if (n < 1 || n > size - 1)
+    throw TException("Error. Wrong index");
+  else
+  {
+    int i = 0;
+    TElem<T>* t = begin;
+    while (i != n - 1)
+    {
+      t = t->GetNext();
+      i++;
+    }
+    TElem<T>* temp = new TElem<T>(A, t->GetNext());
+    t->SetNext(temp);
+    size++;
+  }
+}
+
+template<class T>
+T TList<T>::Get(int n)
+{
+  if (this->IsEmpty())
+    throw TException("Error. List is empty.");
+  if (n < 1 || n > size - 1)
+    throw TException("Error. Wrong index");
+  else
+  {
+    int i = 0;
+    size--;
+    TElem<T>* t1 = begin;
+    TElem<T>* t2 = begin->GetNext();
+    while (i != n - 1)
+    {
+      t1 = t2;
+      t2 = t2->GetNext();
+      i++;
+    }
+    T temp = t2->GetData();
+    t1->SetNext(t2->GetNext());
+    delete t2;
+    return temp;
+  }
+	
 template <class T>
 void TList<T>::PutBegin(T A)
 {
