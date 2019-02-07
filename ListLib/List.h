@@ -118,7 +118,7 @@ T TList<T>::Get(int n)
     delete t2;
     return temp;
   }
-	
+}	
 template <class T>
 void TList<T>::PutBegin(T A)
 {
