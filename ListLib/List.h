@@ -82,14 +82,14 @@ void TList<T>::Put(int n, T A)
   else
   {
     int i = 0;
-    TElem<T>* t = begin;
+    TElem<T>* a = begin;
     while (i != n - 1)
     {
-      t = t->GetNext();
+      a = a->GetNext();
       i++;
     }
-    TElem<T>* temp = new TElem<T>(A, t->GetNext());
-    t->SetNext(temp);
+    TElem<T>* temp = new TElem<T>(A, a->GetNext());
+    a->SetNext(temp);
     size++;
   }
 }
