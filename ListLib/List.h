@@ -46,11 +46,11 @@ TList<T>::TList(TList<T> &A)
 	{
 		begin = new TElem<T>(*A.begin);
 		b = begin;
-		while (a->GetNext() != 0)
+		while (a->GetNext()!= 0)
 		{
-			b.SetNext=new TElem<T>(*(a->GetNext()));
+			b.SetNext(new TElem<T>(*(a->GetNext())));
 			a = a->GetNext();
-			b = b.GetNext();
+			b = b->GetNext();
 		}
 	}
 }
