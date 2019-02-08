@@ -38,7 +38,7 @@ template <class T>
 TList<T>::TList(TList<T> &A)
 {
 	
-	TElem<T>* a = A.begin, b;
+	TElem<T>* a = A.begin, *b;
 	size = A.size;
 	if (A.begin == 0)
 		begin = 0;
@@ -48,7 +48,7 @@ TList<T>::TList(TList<T> &A)
 		b = begin;
 		while (a->GetNext()!= 0)
 		{
-			b.SetNext(new TElem<T>(*(a->GetNext())));
+			b->(SetNext(new TElem<T>(*(a->GetNext()))));
 			a = a->GetNext();
 			b = b.GetNext();
 		}
@@ -225,16 +225,16 @@ bool TList<T>::IsFull()
 	{
 		TElem<T>* A = new TElem<T>();
 		if (A == NULL)
-			return false;
+			return true;
 		else
 		{
 			delete A;
-			return true;
+			return false;
 		}
 	}
 	catch (...)
 	{
-		return false;
+		return 0;
 	}
 	return true;
 }
