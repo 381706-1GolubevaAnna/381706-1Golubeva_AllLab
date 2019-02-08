@@ -55,7 +55,7 @@ TEST(StackList, can_get)
 {
 	TStackList<int> St(5);
 	St.Put(1);
-	ASSERT_NO_THROW(stack.Get());
+	ASSERT_NO_THROW(St.Get());
 }
 
 TEST(StackList, can_get_correctly)
