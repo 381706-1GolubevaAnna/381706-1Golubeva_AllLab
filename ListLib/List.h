@@ -225,16 +225,16 @@ bool TList<T>::IsFull()
 	{
 		TElem<T>* A = new TElem<T>();
 		if (A == NULL)
-			return false;
+			return true;
 		else
 		{
 			delete A;
-			return true;
+			return false;
 		}
 	}
 	catch (...)
 	{
-		return false;
+		return 0;
 	}
 	return true;
 }
