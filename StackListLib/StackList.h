@@ -50,7 +50,7 @@ template <class T>
 T TStackList<T>::Get()
 {
 	if (this->IsEmpty())
-		throw Txception("Error. Stack is empty.");
+		throw TException("Error. Stack is empty.");
 	return TList<T>::GetBegin();
 }
 
