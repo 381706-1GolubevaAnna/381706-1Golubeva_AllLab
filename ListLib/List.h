@@ -50,7 +50,7 @@ TList<T>::TList(TList<T> &A)
 		{
 			b->(SetNext(new TElem<T>(*(a->GetNext()))));
 			a = a->GetNext();
-			b = b.GetNext();
+			b = b->GetNext();
 		}
 	}
 }
