@@ -38,7 +38,7 @@ template <class T>
 TList<T>::TList(TList<T> &A)
 {
 	
-	TElem<T>* a = A.begin, b;
+	TElem<T>* a = A.begin, *b;
 	size = A.size;
 	if (A.begin == 0)
 		begin = 0;
@@ -50,7 +50,7 @@ TList<T>::TList(TList<T> &A)
 		{
 			b.SetNext(new TElem<T>(*(a->GetNext())));
 			a = a->GetNext();
-			b = b.GetNext();
+			b = b->GetNext();
 		}
 	}
 }
