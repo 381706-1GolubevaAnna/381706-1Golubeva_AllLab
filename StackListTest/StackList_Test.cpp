@@ -1,5 +1,5 @@
 #include "gtest.h"
-#include "StackList.h"
+#include "../StackListLib/StackList.h"
 
 TEST(StackList, can_create_stacklist)
 {
