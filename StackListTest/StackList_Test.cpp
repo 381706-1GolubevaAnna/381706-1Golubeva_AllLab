@@ -83,11 +83,3 @@ TEST(StackList, can_use_empty_check_false)
 	ASSERT_FALSE(St.IsEmpty());
 }
 
-TEST(StackList, Poryadok_vivoda)
-{
-	TStackList<int> St(3);
-	Stt.Put(1),St.Put(2), St.Put(3);
-	ASSERT_EQ(St.Get(), 3);
-	ASSERT_EQ(St.Get(), 2);
-	ASSERT_EQ(St.Get(), 1);
-}
