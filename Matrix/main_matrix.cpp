@@ -25,7 +25,7 @@ int main()
     cout << "A\n";
     cout << A << endl;
     cout << "B";
-    cout << B << endl;
+    cout << B << endl; }
   /*
     res = A + B;
     cout << "A + B" << endl << res << endl;
