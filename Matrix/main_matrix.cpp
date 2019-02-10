@@ -22,6 +22,8 @@ int main()
 	  A[i][j] = (i + 1) * (j + 1);
 	 
 	}
+    cout << A[2];
+    cout<<endl;
     cout << "A\n";
     cout << A << endl;
     cout << "B";
