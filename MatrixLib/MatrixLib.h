@@ -10,6 +10,7 @@ public:
   TMatrix(int n = 10);
   TMatrix(const TMatrix<T> &A);
   TMatrix(const TVector<TVector<T> > &A);
+  TVector<T>& operator [] (int i);
   TMatrix<T>& operator=(TVector<TVector<T> > &A);
   TMatrix operator +(TMatrix<T> &A);
   TMatrix operator -(TMatrix<T> &A);
@@ -20,6 +21,15 @@ public:
   template <class FriendT> friend istream& operator>>(istream &istr, TMatrix<FriendT> &A);
   template <class FriendT> friend ostream & operator<<(ostream &ostr, const TMatrix<FriendT> &A);
 };
+
+template <class T>
+TVector<T>& TMatrix<T>::operator[](int i)
+{
+	if (0=< i < this->size)
+			return this->vector[i];
+		else throw TException("Error");
+
+}
 
 template <class T>
 TMatrix<T> ::TMatrix(int n) : TVector<TVector<T> >(n)
