@@ -5,7 +5,7 @@ int main()
 {
   try
   {
-    TMatrix<int> A(4), B(2), res(2);
+    TMatrix<int> A(5), B(2), res(2);
     /*A[0][0] = 7;
     A[0][1] = 2;
     A[1][0] = 3;
