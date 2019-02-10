@@ -8,22 +8,22 @@ class TArrayList
 private:
 
 	T * mas;
-	int *nextIndex; // èíäåêñû, óêàçûâàþùèå íà ñëåäþóùèé ýëåìåíò ñïèñêà
-	int *prevIndex; // èíäåêñû, óêàçûâàþùèå íà ïðåäûäóùèé ýëåìåíò ñïèñêà
-	int size; // ðàçìåð ñïèñêà
-	int count; // êîëè÷åñòâî ýëåìåíòîâ â ñïèñêå
-	int begin; // ïåðâûé ýëåìåíò ñïèñêà(òî÷íåå, åãî èíäåêñ)
-	int end; // ïîñëåäíèé ýëåìåíò ñïèñêà(òî÷íåå, åãî èíäåêñ)
-	TQueue <int> freeElem; //Î÷åðåäü ñâîáîäíûõ ýëåìåíòîâ
+	int *nextIndex; 
+	int *prevIndex; 
+	int size; 
+	int count;
+	int begin;
+	int end; 
+	TQueue <int> freeElem; 
 public:
-	TArrayList(int _size = 10); // êîíñòðóêòîð 
-	TArrayList(TArrayList<T> &A); // êîíñòðóêòîð êîïèðîâàíèÿ
-	void PutBegin(T elem); // ïîëîæèòü â íà÷àëî ñïèñêà
-	void PutEnd(T elem);  // ïîëîæèòü â êîíåö ñïèñêà 
-	T GetBegin(); // çàáðàòü èç íà÷àëà ñïèñêà 
-	T GetEnd();  // çàáðàòü èç êîíöà ñïèñêà 
-	bool IsFull(); // ïðîâåðêà íà ïîëíîòó
-	bool IsEmpty(); // ïðîâåðêà íà ïóñòîòó
+	TArrayList(int _size = 10); 
+	TArrayList(TArrayList<T> &A);
+	void PutBegin(T elem); 
+	void PutEnd(T elem);  
+	T GetBegin(); 
+	T GetEnd(); 
+	bool IsFull(); 
+	bool IsEmpty(); 
 };
 
 template <class T>
