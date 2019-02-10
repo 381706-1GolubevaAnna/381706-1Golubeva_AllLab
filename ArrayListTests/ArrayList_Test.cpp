@@ -15,14 +15,14 @@ TEST(ArrayList, throws_when_create_list_with_negative_size)
 {
 	ASSERT_ANY_THROW(TArrayList <int> List(-5));
 }
-
+/*
 TEST(ArrayList, can_copy_list)
 {
 	TArrayList <int> L(5);
 
 	ASSERT_NO_THROW(TArrayList <int> L1(L));
 }
-
+*/
 TEST(ArrayList, can_put_and_get_begin)
 {
 	TArrayList <int> L(1);
