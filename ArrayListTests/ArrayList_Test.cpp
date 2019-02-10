@@ -1,5 +1,5 @@
 #include <gtest.h>
-#include "..//ArrayListLib/TArrayList.h"
+#include "..//ArrayListLib/ArrayList.h"
 
 TEST(ArrayList, can_create_list)
 {
