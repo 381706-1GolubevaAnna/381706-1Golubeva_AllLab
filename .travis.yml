@@ -8,7 +8,6 @@ before_script:
 script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
-  - ./MultiStack/MultiStack
   - ./MultiStackTest/MultiStackTest
 notifications:
   email: false
