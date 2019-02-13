@@ -161,7 +161,7 @@ void TMStack<T>::Repack(int _n)
 	for (int i = 0; i < n; i++)
 	{
 		if (new_start[i] <= old_start[i])
-			for (int j = 0; j < h[i]->TNewStack<T>::->GetTop(); j++)
+			for (int j = 0; j < h[i]->TNewStack<T>::GetTop(); j++)
 				new_start[i][j] = old_start[i][j];
 		else
 		{
