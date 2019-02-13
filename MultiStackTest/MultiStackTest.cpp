@@ -39,7 +39,7 @@ TEST(MStack, can_get)
 TEST(MStack, can_check_is_empty_true)
 {
 	TMStack<int> MStack(5, 15);
-	ASSERT_TRUE(MStack.ISEmpty(1));
+	ASSERT_TRUE(MStack.IsEmpty(1));
 }
 
 TEST(MStack, can_check_is_empty_false)
