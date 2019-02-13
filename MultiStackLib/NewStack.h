@@ -15,7 +15,6 @@ public:
 	void Put(T _A);
 	int GetSize();
 	int GetTop();
-	/*void PrintNewStack();*/
 };
 
 template <class T>
@@ -75,10 +74,3 @@ void TNewStack<T>::Put(T _A)
 	TStack<T>::top++;
 }
 
-//
-//template <class T>
-//void TNewStack<T>::PrintNewStack()
-//{
-//	for (int i = 0; i < TStack<T>::top; i++)
-//		cout << " " << TStack<T>::mas[i];
-//}
