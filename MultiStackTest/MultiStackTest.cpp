@@ -51,7 +51,7 @@ TEST(MStack, can_check_is_empty_false)
 
 TEST(MStack, can_check_is_full_true)
 {
-	TMStack<int> MStack(3, 15);
+	TMStack<int> MStack(5, 15);
 	MStack.Set(1, 1);
 	MStack.Set(1, 2);
 	MStack.Set(1, 3);
@@ -62,8 +62,6 @@ TEST(MStack, can_check_is_full_false)
 {
 	TMStack<int> MStack(5, 15);
 	MStack.Set(1, 1);
-	MStack.Set(1, 2);
-	MStack.Set(1, 3);
 	ASSERT_FALSE(MStack.IsFull(1));
 }
 
