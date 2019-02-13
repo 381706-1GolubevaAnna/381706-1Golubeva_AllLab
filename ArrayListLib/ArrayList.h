@@ -17,11 +17,14 @@ private:
 	TQueue <int> freeElem; 
 public:
 	TArrayList(int _size = 10); 
-	TArrayList(TArrayList<T> &A);
+	TArrayList(TArrayList<T> &A);\
+        ~TArrayList();
 	void PutBegin(T elem); 
 	void PutEnd(T elem);  
 	T GetBegin(); 
 	T GetEnd(); 
+	void Put(int n, T elem);  
+	T Get(int n);
 	bool IsFull(); 
 	bool IsEmpty(); 
 };
@@ -66,6 +69,13 @@ TArrayList<T>::TArrayList(TArrayList<T> &A)
 	}
 }
 
+template<class T>
+inline TArrayList<T>::~TArrayList()
+{
+  delete[] mas;
+  delete[] nextIndex;
+  delete[] prevIndex;
+}
 template <class T>
 void TArrayList<T>::PutBegin(T elem)
 {
@@ -151,4 +161,44 @@ bool TArrayList<T>::IsEmpty()
 		return true;
 	else
 		return false;
+}
+template<class T>
+void TArrayList<T>::Put(int n, T elem)
+{
+	if (IsFull())
+		throw "Error. List is full";
+	if (n < 1 || n > count - 1)
+		throw "Error. Wrong index";
+	int free = freeElem.Get();
+	mas[free] = elem;
+	int temp1 = begin;
+	int temp2 = nextIndex[begin];
+	for (int i = 0; i < n - 1; i++)
+	{
+		temp1 = temp2;
+		temp2 = nextIndex[temp2];
+	}
+	nextIndex[free] = temp2;
+	nextIndex[temp1] = free;
+	prevIndex[free] = temp1;
+	prevIndex[temp1] = free;
+	count++;
+}
+
+template<class T>
+T TArrayList<T>::Get(int n)
+{
+	if (IsEmpty())
+		throw "Error. List is empty";
+	if (n < 1 || n > count - 1)
+		throw "Error. Wrong index";
+	int temp = begin;
+	for (int i = 0; i < n; i++)
+		temp = nextIndex[temp];
+	nextIndex[prevIndex[temp]] = nextIndex[temp];
+	prevIndex[nextIndex[temp]] = prevIndex[temp];
+	T elem = mas[temp];
+	freeElem.Put(temp);
+	count--;
+	return elem;
 }
