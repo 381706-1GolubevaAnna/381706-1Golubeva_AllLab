@@ -12,11 +12,9 @@ int main()
 	MStack.Set(1, 3);
 	MStack.Set(1, 4);
 	cout << endl;
-	cout << MStack.Get(1);
-	cout << endl;
-        cout << MStack.Get(1);
-	cout << endl;
-        cout << MStack.Get(1);
-	cout << endl;
+	cout << MStack.Get(1) << endl;
+        cout << MStack.Get(1) << endl;
+        cout << MStack.Get(1) << endl;
+	cout << MStack.Get(1) << endl;
 	return 0;
 }
