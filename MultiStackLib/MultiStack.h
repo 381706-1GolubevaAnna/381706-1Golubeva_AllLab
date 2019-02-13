@@ -37,7 +37,7 @@ TMStack<T>::TMStack(int _n, int _size)
 	for (int i = 0; i < n; i++)
 		A[i] = int(size / n);
 	A[0] += size % n;
-	A[0] = new TNewStack<T>(A[0], &mas[0]);
+	h[0] = new TNewStack<T>(A[0], &mas[0]);
 	for (int i = 1; i < n; i++)
 		h[i] = new TNewStack<T>(A[i], &mas[A[0]] + ((i - 1)*A[i]));
 }
