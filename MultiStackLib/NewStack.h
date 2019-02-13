@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include "Stack.h"
+#include "..//StackLib/Stack.h"
 using namespace std;
 
 template <class T>
