@@ -1,4 +1,4 @@
-#include "..//MStackLib/MStack.h"
+#include "..//MultiStackLib/MultiStack.h"
 #include "..//gtest/gtest.h"
 
 
