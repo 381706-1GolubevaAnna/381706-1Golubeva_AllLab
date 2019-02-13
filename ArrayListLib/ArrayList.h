@@ -17,7 +17,7 @@ private:
 	TQueue <int> freeElem; 
 public:
 	TArrayList(int _size = 10); 
-	TArrayList(TArrayList<T> &A);\
+	TArrayList(TArrayList<T> &A);
         ~TArrayList();
 	void PutBegin(T elem); 
 	void PutEnd(T elem);  
@@ -38,8 +38,8 @@ TArrayList<T>::TArrayList(int _size) : freeElem(_size)
 	count = 0; 
 	begin = -1; 
 	end = -1;
-  mas = new T[size];
-  nextIndex = new int[size];
+        mas = new T[size];
+        nextIndex = new int[size];
 	prevIndex = new int[size];
 	for (int i = 0; i < size; i++)
 	{
