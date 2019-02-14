@@ -39,7 +39,7 @@ TEST(TMonom, can_get_power)
 {
 	int mas[] = { 5, 7, 3 };
 	TMonom M(3, mas, 1);
-	int nmas[] = {4,2,5}
+	int nmas[] = {4,2,5};
 
 	ASSERT_NO_THROW(M.SetPower(nmas));
 	ASSERT_EQ(nmas[0], M.GetPower()[0]);
