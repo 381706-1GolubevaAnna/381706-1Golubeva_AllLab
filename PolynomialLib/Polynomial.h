@@ -37,5 +37,6 @@ public:
 		temp = temp->GetNext();
 	}
 	return ostr;
+	}
 };
 
