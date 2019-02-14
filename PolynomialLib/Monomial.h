@@ -50,7 +50,7 @@ public:
 		for (int i = 0; i < A.n; i++)
 			if (A.power[i] != 0)
 			{
-				ostr << "(x" << i << "^" << M.power[i] << ")";
+				ostr << "(x" << i << "^" << A.power[i] << ")";
 			}
 	}
 	return ostr;
