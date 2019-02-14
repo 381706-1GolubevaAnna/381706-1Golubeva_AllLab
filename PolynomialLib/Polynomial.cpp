@@ -387,20 +387,3 @@ TPolynom TPolynom::operator*(TPolynom & P)
 	}
 	return res;
 }
-
-ostream& operator<<(ostream& ostr, TPolynom& P)
-{
-	TMonom *temp = P.start;
-	if (temp != 0)
-	{
-		ostr << *temp;
-		temp = temp->GetNext();
-	}
-	while (temp != 0)
-	{
-		if (temp->GetCoeff() != 0)
-			ostr << " + " << *temp;
-		temp = temp->GetNext();
-	}
-	return ostr;
-}
