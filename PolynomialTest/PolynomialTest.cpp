@@ -53,7 +53,7 @@ TEST(TMonom, can_set_size)
 
 	TMonom M(3, mas, 1);
 
-	M.SetN();
+	M.SetN(2);
 	EXPECT_EQ(2, M.GetN());
 }
 
