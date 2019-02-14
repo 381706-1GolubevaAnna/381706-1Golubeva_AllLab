@@ -3,8 +3,8 @@
 int main()
 {
 
-	int mas[] = { 1,2,3 },
-    int nmas[] = { 7,3,4};
+	int mas[] = { 1,2,3 };
+        int nmas[] = { 7,3,4};
 
 	TMonom M1(3, mas, 2),  M2(3, nmas, 1);
 
