@@ -22,6 +22,20 @@ public:
 	TPolynom& operator+=(TMonom &M);
 	TPolynom& operator-=(TMonom &M);
 	bool operator==(const TPolynom &P);
-	friend std::ostream& operator<<(std::ostream& ostr, TPolynom& P);
+	friend std::ostream& operator<<(std::ostream& ostr, TPolynom& P)
+        {
+	TMonom *temp = P.start;
+	if (temp != 0)
+	{
+		ostr << *temp;
+		temp = temp->GetNext();
+	}
+	while (temp != 0)
+	{
+		if (temp->GetCoeff() != 0)
+			ostr << " + " << *temp;
+		temp = temp->GetNext();
+	}
+	return ostr;
 };
 
