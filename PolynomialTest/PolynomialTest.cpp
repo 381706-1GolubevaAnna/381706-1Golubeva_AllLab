@@ -53,7 +53,7 @@ TEST(TMonom, can_set_size)
 
 	TMonom M(3, mas, 1);
 
-	M.SetN2);
+	M.SetN();
 	EXPECT_EQ(2, M.GetN());
 }
 
@@ -199,7 +199,7 @@ TEST(TMonom, can_compare_monomials_with_equal_size)
 TEST(TMonom, throws_when_compare_monomials_with_different_size)
 {
 	int mas[] = { 5, 7, 3 };
-	int n_mas[] = { 5, 4, 3, 2};
+	int nmas[] = { 5, 4, 3, 2};
 
 	TMonom M(3, mas, 2);
 	TMonom M1(4, nmas, 2);
