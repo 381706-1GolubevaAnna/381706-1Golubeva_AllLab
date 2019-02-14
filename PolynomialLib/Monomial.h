@@ -4,10 +4,10 @@
 class TMonom
 {
 protected:
-	TMonom* next;  //указатель на следующий моном
-	int *power;    //массив степеней
-	int n;         //кол-во переменных в мономе
-	double coeff;  //коэффицтент
+	TMonom* next;  
+	int *power;   
+	int n;        
+	double coeff;  
 public:
 	TMonom();
 	TMonom(int _n, int* _power, double _coeff);
@@ -34,28 +34,25 @@ public:
 	bool operator>(TMonom& A);
 	bool operator<(TMonom& A);
 
-	friend istream& operator>>(istream& istr, TMonom& A);
-	friend ostream& operator<<(ostream& ostr, TMonom& A);
-};
+	friend istream& operator>>(istream& istr, TMonom& A)
+        {
+	istr >> A.coeff;
+	for (int i = 0; i < A.n; i++)
+		istr >> A.power[i];
+	return istr;
+        }
 
-//istream& operator>>(istream& istr, TMonom& A)
-//{
-//	istr >> A.coeff;
-//	for (int i = 0; i < A.n; i++)
-//		istr >> A.power[i];
-//	return istr;
-//}
-//
-//ostream& operator<<(ostream& ostr, TMonom& A)
-//{
-//	ostr << A.coeff;
-//	if (A.coeff != 0)
-//	{
-//		for (int i = 0; i < A.n; i++)
-//			if (A.power[i] != 0)
-//			{
-//				ostr << "(x" << i << "^" << M.power[i] << ")";
-//			}
-//	}
-//	return ostr;
-//}
+	friend ostream& operator<<(ostream& ostr, TMonom& A)
+	{
+	ostr << A.coeff;
+	if (A.coeff != 0)
+	{
+		for (int i = 0; i < A.n; i++)
+			if (A.power[i] != 0)
+			{
+				ostr << "(x" << i << "^" << M.power[i] << ")";
+			}
+	}
+	return ostr;
+        }	
+};
