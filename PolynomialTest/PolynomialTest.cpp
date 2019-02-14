@@ -53,8 +53,8 @@ TEST(TMonom, can_set_size)
 
 	TMonom M(3, mas, 1);
 
-	M.SetSize(2);
-	EXPECT_EQ(2, M.GetSize());
+	M.SetN2);
+	EXPECT_EQ(2, M.GetN());
 }
 
 
@@ -64,7 +64,7 @@ TEST(TMonom, can_get_size)
 
 	TMonom M(3, mas, 1);
 
-	EXPECT_EQ(3, M.GetSize());
+	EXPECT_EQ(3, M.GetN());
 }
 
 TEST(TMonom, can_set_coeff)
