@@ -6,8 +6,8 @@ class TPolynom
 {
 protected:
 	TMonom *start;
-	int n;          //количество переменных в мономе
-	int size;       //количество мономов 
+	int n;          
+	int size;      
 public:
 	TPolynom(int _n = 10);
 	TPolynom(TPolynom & P);
