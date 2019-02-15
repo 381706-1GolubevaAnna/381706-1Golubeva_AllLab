@@ -8,6 +8,6 @@ before_script:
 script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
-  - ./QueueTest/QueueTest
+  - ./PolishTest/PolishTest
 notifications:
   email: false
