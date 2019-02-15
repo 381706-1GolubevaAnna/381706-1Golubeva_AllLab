@@ -13,6 +13,7 @@ class TQueue : public TStack <T>
   virtual ~TQueue();
   void Put(T a);
   T Get();
+  T GetTop();
   bool IsFull();
   bool IsEmpty();
   void PrintQueue();
@@ -47,6 +48,11 @@ void TQueue<T>::Put(T a)
     start = (start + 1) % TStack<T>::size;
     count++;
   }
+}
+template <class T>
+T TQueue<T>::GetTop()
+{
+  return TStack<T>::mas[start];
 }
 
 template <class T>
