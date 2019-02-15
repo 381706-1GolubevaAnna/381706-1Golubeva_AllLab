@@ -7,9 +7,11 @@ set(Exception Exception)
 
 set(StackLib StackLib)
 
-set(Queue Queue)
 set(QueueLib QueueLib)
-set(QueueTest QueueTest)
+
+et(PolishLib PolishLib)
+set(Polish Polish)
+set(PolishTest PolishTest)
 
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Configs" FORCE) #Создается переменная CMAKE_CONFIGURATION_TYPES со значением "Debug;Release" и меткой/разделом Configs, переменная сохраниется в специальном файле доступном из всех файлов,
 if(NOT CMAKE_BUILD_TYPE) # проверка имеющихся у компилятора вариантов сборки
@@ -23,9 +25,13 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Exception)
 add_subdirectory(Exception)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/QueueLib)
-add_subdirectory(Queue)
 add_subdirectory(QueueLib)
-add_subdirectory(QueueTest)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/StackLib)
-add_subdirectory(StackLib)
+add_subdirectory(StackLib) 
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/PolishLib)
+add_subdirectory(PolishLib) 
+add_subdirectory(Polish) 
+add_subdirectory(PolishTest) 
+
