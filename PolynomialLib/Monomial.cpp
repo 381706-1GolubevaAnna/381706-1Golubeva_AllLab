@@ -1,6 +1,5 @@
 #include "Monomial.h"
-#include<iostream>
-using namespace std;
+
 
 
 TMonom::TMonom()
