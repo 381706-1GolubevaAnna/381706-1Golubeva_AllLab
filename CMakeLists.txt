@@ -9,7 +9,7 @@ set(StackLib StackLib)
 
 set(QueueLib QueueLib)
 
-et(PolishLib PolishLib)
+set(PolishLib PolishLib)
 set(Polish Polish)
 set(PolishTest PolishTest)
 
