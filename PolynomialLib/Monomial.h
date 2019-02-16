@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Exception.h"
 class TMonom
 {
 protected:
