@@ -2,7 +2,7 @@
 #include "Monomial.h"
 #include <iostream>
 using namespace std;
-#include "Exception.h"
+
 class TPolynom
 {
 protected:
