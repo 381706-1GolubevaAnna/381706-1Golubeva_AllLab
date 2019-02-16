@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Polish.h"
+#include "Polish.cpp"
 
 using namespace std;
 
