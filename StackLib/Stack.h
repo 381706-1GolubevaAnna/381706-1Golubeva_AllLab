@@ -11,6 +11,7 @@ class TStack
   int top;
   T* mas;
   public:
+  int GetSize() { return size; }
   TStack(int n = 0);
   TStack(TStack<T> &st);
   virtual ~TStack();
