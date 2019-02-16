@@ -152,7 +152,7 @@ int GetPriority(const char op)
 double Res(TQueue<char> Q)
 {
 	double res;
-	TStack <double> St(Q.GetSize());
+	TStack <double> St(Q.Get());
 	if (IsOperation(Q.GetTop()))
 		throw TException("Error. Uncurrent queue.");
 
@@ -190,7 +190,7 @@ double Res(TQueue<char> Q)
 TQueue<char> ConvertToPolish(TString str)
 {
 	int open = 0;
-	int	close = 0;
+	int close = 0;
 	TQueue<char> Q(str.GetSize() * 4);
 	TStack<char> St(str.GetSize() * 2);
 
@@ -214,7 +214,9 @@ TQueue<char> ConvertToPolish(TString str)
 
 		if ((i > 0) && (str[i] == '-') && (str[i - 1] == '('))
 		{
-			Qu.Put('{'); Qu.Put('0'); Qu.Put('}');
+			Q.Put('{');
+			Q.Put('0');
+			Q.Put('}');
 		}
 
 		if (!IsOperation(str[i]) && isdigit(str[i]))
