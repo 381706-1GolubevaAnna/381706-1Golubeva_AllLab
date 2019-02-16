@@ -1,7 +1,5 @@
 #pragma once
 #include "Monomial.h"
-#include <iostream>
-using namespace std;
 
 class TPolynom
 {
