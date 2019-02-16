@@ -260,7 +260,7 @@ TQueue<char> ConvertToPolish(TString str)
 				int p = GetPriority(str[i]);
 				if (p > GetPriority(St.StGetTop()))
 					St.Put(str[i]);
-				else if (p <= GetPriority(St.GetTop()) && p != 0)
+				else if (p <= GetPriority(St.StGetTop()) && p != 0)
 				{
 					while (p <= GetPriority(St.StGetTop()) && !St.IsEmpty())
 						Q.Put(St.Get());
