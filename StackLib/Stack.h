@@ -12,6 +12,7 @@ class TStack
   T* mas;
   public:
   int GetSize() { return size; }
+  T StGetTop();
   TStack(int n = 0);
   TStack(TStack<T> &st);
   virtual ~TStack();
@@ -65,6 +66,14 @@ TStack <T> :: ~TStack()
     delete[] mas;
   top = 0;
   size = 0;
+}
+
+template <class T>
+T TStack<T> :: StGetTop()
+{
+  if (IsEmpty())
+    throw "Stack is empty.";
+  return mas[top - 1];
 }
 
 template <class T>
