@@ -250,7 +250,7 @@ TQueue<char> ConvertToPolish(TString str)
 			}
 			else if (str[i] == ')')
 			{
-				while (St.GetTop() != '(')
+				while (St.StGetTop() != '(')
 					Q.Put(St.Get());
 				St.Get();
 				close++;
@@ -258,11 +258,11 @@ TQueue<char> ConvertToPolish(TString str)
 			else
 			{
 				int p = GetPriority(str[i]);
-				if (p > GetPriority(St.GetTop()))
+				if (p > GetPriority(St.StGetTop()))
 					St.Put(str[i]);
 				else if (p <= GetPriority(St.GetTop()) && p != 0)
 				{
-					while (p <= GetPriority(St.GetTop()) && !St.IsEmpty())
+					while (p <= GetPriority(St.StGetTop()) && !St.IsEmpty())
 						Q.Put(St.Get());
 					St.Put(str[i]);
 				}
