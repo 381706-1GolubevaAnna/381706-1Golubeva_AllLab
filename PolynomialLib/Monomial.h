@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include "..//Exception/Exception.h"
-using namespace srd;
+using namespace std;
 class TMonom
 {
 protected:
