@@ -25,7 +25,7 @@ TEST(Polish, can_check_is_operation)
 
 TEST(Polish, can_convert_to_polish)
 {
-+	char s[] = "14+5";
+	char s[] = "14+5";
 	TString str(s);
 	TQueue<char> A;
 
