@@ -11,6 +11,6 @@ int main()
     cout << str;
     TQueue<char> B;
     B = ConvertToPolish(str);
-    cout << " = " << Rez(B) << endl;
+    cout << " = " << Res(B) << endl;
     return 0;
 }
