@@ -1,5 +1,8 @@
 #pragma once
-#include "Exception.h"
+#include <iostream>
+#include "..//Exception/Exception.h"
+using namespace std;
+
 class TMonom
 {
 protected:
