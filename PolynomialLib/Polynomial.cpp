@@ -52,8 +52,8 @@ TMonom* TPolynom::GetStart()
 
 TPolynom TPolynom::operator+(TPolynom & P)
 {
-	/*if (this->n != P.n)
-		throw TException("Error. Different size");*/
+	if (this->n != P.n)
+		throw TException("Error. Different size");
 	TPolynom res(n);
 
 	TMonom *a = start; 
