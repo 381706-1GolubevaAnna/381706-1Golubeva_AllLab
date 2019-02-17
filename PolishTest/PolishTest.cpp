@@ -73,7 +73,7 @@ TEST(Polish, throw_when_math_expression_have_is_an_unacceptable_symbol)
   TString A(s);
   TQueue<char> B;
 
-  ASSERT_ANY_THROW(B = ToPolishish(A));
+  ASSERT_ANY_THROW(B = ConvertToPolishish(A));
 }
 
 TEST(Polish, throw_when_first_operation_is_something)
