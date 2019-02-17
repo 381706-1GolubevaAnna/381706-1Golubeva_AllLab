@@ -152,7 +152,7 @@ int GetPriority(const char op)
 double Res(TQueue<char> Q)
 {
 	double res;
-	TStack <double> St(Q.Get());
+	TStack <double> St(Q.GetSize());
 	if (IsOperation(Q.GetTop()))
 		throw TException("Error. Uncurrent queue.");
 
@@ -208,7 +208,7 @@ TQueue<char> ConvertToPolish(TString str)
 			else if (IsOperation(str[0]))
 			{
 				if (GetPriority(str[0]) != 1)
-					throw TException("Error. Uncurrent math expression.");
+					throw TException("Error. Wrong math expression.");
 			}
 		}
 
@@ -238,7 +238,7 @@ TQueue<char> ConvertToPolish(TString str)
 				open++;
 
 			if (str[i] == ')')
-				throw TException("Error. Uncurrent math expression.");
+				throw TException("Error. Wrong math expression.");
 		}
 
 		else if (IsOperation(str[i]))
@@ -269,11 +269,11 @@ TQueue<char> ConvertToPolish(TString str)
 			}
 		}
 		else if (str[i] != '\0')
-			throw TException("Error. Uncurrent math expression.");
+			throw TException("Error. Wrong math expression.");
 	}
 	while (!St.IsEmpty())
 		Q.Put(St.Get());
 	if (open != close)
-		throw TException("Error. Uncurrent math expression.");
+		throw TException("Error. Wrong math expression.");
 	return Q;
 }
