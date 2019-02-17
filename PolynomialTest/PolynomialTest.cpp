@@ -39,7 +39,7 @@ TEST(TMonom, can_get_power)
 {
 	int mas[] = { 5, 7, 3 };
 	TMonom M(3, mas, 1);
-	int nmas[] = {4,2,5};
+	int nmas[] = {4, 2, 5};
 
 	ASSERT_NO_THROW(M.SetPower(nmas));
 	ASSERT_EQ(nmas[0], M.GetPower()[0]);
@@ -285,7 +285,7 @@ TEST(TPolynom, can_add_polynomials)
 	TPolynom P1;
 	int mas[] = { 5, 7, 3 };
 	int nmas[] = { 5, 4, 3 };
-	int nnmas[] = { 1,2,3 };
+	int nnmas[] = { 1, 2, 3 };
 	TMonom M(3, mas, 4);
 	TMonom M1(3, nmas, 4);
 	TMonom M2(3, nnmas, 4);
