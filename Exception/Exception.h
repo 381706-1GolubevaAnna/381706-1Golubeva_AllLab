@@ -1,21 +1,15 @@
 #pragma once
-
 #include <iostream>
 #include <string>
-using namespace std;
 
 class TException
 {
   private:
-  string message;
+  std::string message;
   public:
-  TException(string _message);
-  void Print();
+  TException(std::string _message):message(_message) {}
+  void Print()
+  {
+  std::cout << "\nWarning! \nMessage: " << message << std::endl;
+  }
 };
-
-TException::TException(string _message) : message(_message) {}
-
-void TException::Print()
-{
-  cout << "\nWarning! \nMessage: " << message << endl;
-}
