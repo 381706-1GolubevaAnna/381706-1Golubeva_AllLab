@@ -62,7 +62,7 @@ T TQueue<T>::Get()
     throw TException("Error.Queue is empty");
   else 
   {
-    T temp = TStack<T>::mas[TStack<T>::top];
+    T temp = TStack<T>::mas[start];
     start = (start + 1) % TStack<T>::size;
     count--;
     return temp;
