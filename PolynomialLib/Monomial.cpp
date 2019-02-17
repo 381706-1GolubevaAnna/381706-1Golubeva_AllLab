@@ -1,7 +1,5 @@
 #include "Monomial.h"
 
-
-
 TMonom::TMonom()
 {
 	next = NULL;
