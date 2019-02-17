@@ -10,12 +10,11 @@ class TException
   string message;
   public:
   TException(string _message);
-  void Print();
+  void Print()
+  {
+  cout << "\nWarning! \nMessage: " << message << endl;
+  }
 };
 
 TException::TException(string _message) : message(_message) {}
 
-void TException::Print()
-{
-  cout << "\nWarning! \nMessage: " << message << endl;
-}
