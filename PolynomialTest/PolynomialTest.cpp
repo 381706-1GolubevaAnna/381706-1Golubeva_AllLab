@@ -1,4 +1,5 @@
 #include "gtest.h"
+#include "Polynomial.cpp"
 
 TEST(TMonom, can_create_monomial)
 {
