@@ -40,7 +40,7 @@ int TPolynom::GetSize()
 }
 
 
-int TPolynom:: GetN()
+int TPolynom::GetN()
 {
 	return n;
 }
