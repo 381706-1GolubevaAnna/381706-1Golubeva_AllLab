@@ -1,4 +1,4 @@
-#include "../PolishLib/Polish.h"
+#include "Polish.cpp"
 #include <gtest.h>
 
 
