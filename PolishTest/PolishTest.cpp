@@ -73,14 +73,14 @@ TEST(Polish, throw_when_math_expression_have_is_an_unacceptable_symbol)
   TString A(s);
   TQueue<char> B;
 
-  ASSERT_ANY_THROW(B = ConvertToPolishish(A));
+  ASSERT_ANY_THROW(B = ConvertToPolish(A));
 }
 
 TEST(Polish, throw_when_first_operation_is_something)
 {
   char s[] = "*5+8";
 
-  TString A(s)
+  TString A(s);
   TQueue<char> B;
 
   ASSERT_ANY_THROW(B = ConvertToPolish(A));
@@ -91,7 +91,7 @@ TEST(Polish, throw_when_kol_sk_wrong)
   char s[] = "-2+8)";
   char s1[] = "(-2+8";
 
-  TString A(s), B(s1),
+  TString A(s), B(s1);
   TQueue<char> C, D;
 
   ASSERT_ANY_THROW(C = ConvertToPolish(A));
