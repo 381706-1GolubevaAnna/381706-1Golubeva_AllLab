@@ -5,12 +5,12 @@
 class TException
 {
   private:
-  string message;
+  std::string message;
   public:
-  TException(string _message) message(_message) {}
+  TException(std::string _message) message(_message) {}
   void Print()
   {
-  cout << "\nWarning! \nMessage: " << message << endl;
+  std::cout << "\nWarning! \nMessage: " << message << std::endl;
   }
 };
 
