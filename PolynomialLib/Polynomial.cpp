@@ -1,3 +1,4 @@
+#pragma once
 #include "Polynomial.h"
 
 TPolynom::TPolynom(int _n)
