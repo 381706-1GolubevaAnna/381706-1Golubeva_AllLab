@@ -44,9 +44,9 @@ void TQueue<T>::Put(T a)
     throw TException("Error. Queue is full.");
   else 
   {
-    TStack<T>::mas[start] = a;
-    start = (start + 1) % TStack<T>::size;
-    count++;
+    TStack<T>::Put(A);
+  TStack<T>::top = TStack<T>::top % TStack<T>::size;
+  Count++;
   }
 }
 template <class T>
