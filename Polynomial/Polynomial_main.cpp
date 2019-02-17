@@ -1,4 +1,3 @@
-#pragma once
 #include "Polynomial.h"
 
 int main()
