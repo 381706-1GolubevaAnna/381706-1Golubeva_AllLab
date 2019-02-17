@@ -25,7 +25,7 @@ TEST(Polish, can_check_is_operation)
 
 TEST(Polish, can_convert_to_polish)
 {
-	char s[] = "14+5";
+	char s[] = '14+5';
 	TString str(s);
 	TQueue<char> A;
 
@@ -34,7 +34,7 @@ TEST(Polish, can_convert_to_polish)
 	EXPECT_EQ('14', A.Get());
 	EXPECT_EQ('}', A.Get());
 	EXPECT_EQ('{', A.Get());
-	EXPECT_EQ('9', A.Get());
+	EXPECT_EQ('5', A.Get());
 	EXPECT_EQ('}', A.Get());
 	EXPECT_EQ('+', A.Get());
 }
