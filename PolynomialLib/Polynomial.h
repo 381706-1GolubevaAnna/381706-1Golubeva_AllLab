@@ -1,5 +1,5 @@
 #pragma once
-#include "Monomial.h"
+#include "Monomial.cpp"
 
 class TPolynom
 {
