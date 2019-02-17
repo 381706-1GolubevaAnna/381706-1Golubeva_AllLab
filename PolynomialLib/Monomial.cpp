@@ -210,7 +210,7 @@ TMonom TMonom::operator*=(TMonom& A)
 bool TMonom::operator==(TMonom& A)
 {
 	if (n != A.n)
-		return TException("Different size.");;
+		return TException("Different size.");
 	for (int i = 0; i < n; i++)
 		if (power[i] != A.power[i])
 			return false;
