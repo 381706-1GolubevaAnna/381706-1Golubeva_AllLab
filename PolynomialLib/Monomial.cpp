@@ -1,3 +1,4 @@
+#pragma once
 #include "Monomial.h"
 
 TMonom::TMonom()
