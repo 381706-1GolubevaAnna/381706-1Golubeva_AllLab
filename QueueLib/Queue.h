@@ -10,7 +10,6 @@ class TQueue : public TStack <T>
   public:
   TQueue(int n = 0);
   TQueue(TQueue <T> &q);
-  virtual ~TQueue();
   void Put(T a);
   T Get();
   T GetTop();
@@ -33,10 +32,6 @@ TQueue<T>::TQueue(TQueue<T> &q) : TStack<T>(q)
   start = q.start;
   count = q.count;
 }
-
-template <class T>
-TQueue<T>::~TQueue() {}
-
 template <class T>
 void TQueue<T>::Put(T a) 
 {
