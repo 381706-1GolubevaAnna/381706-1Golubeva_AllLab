@@ -18,9 +18,9 @@ public:
 	TPolynom operator+(TPolynom &P);
 	TPolynom operator-(TPolynom &P);
 	TPolynom operator*(TPolynom &P);
-	TPolynom& operator=(TPolynom &P);
-	TPolynom& operator+=(TMonom &M);
-	TPolynom& operator-=(TMonom &M);
+	TPolynom &operator=(TPolynom &P);
+	TPolynom &operator+=(TMonom &M);
+	TPolynom &operator-=(TMonom &M);
 	bool operator==(const TPolynom &P);
 	friend std::ostream& operator<<(std::ostream& ostr, TPolynom& P)
         {
