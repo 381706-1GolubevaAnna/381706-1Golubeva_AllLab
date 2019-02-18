@@ -335,7 +335,7 @@ TPolynom &TPolynom::operator-=(TMonom &M)
 						start->SetNext(b->GetNext());
 						delete[] b;
 					}
-	
+	                                  size++;
 					return *this;
 				}
 				if (*b < M)
