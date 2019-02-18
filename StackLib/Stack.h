@@ -15,7 +15,6 @@ class TStack
   T StGetTop();
   TStack(int n = 0);
   TStack(TStack<T> &st);
-  virtual ~TStack();
   void Put(T a);
   T Get();
   bool IsFull();
@@ -57,15 +56,6 @@ TStack <T> ::TStack(TStack <T> &st)
     for (int i = 0; i < size; i++)
       mas[i] = st.mas[i];
   }
-}
-
-template<class T>
-TStack <T> :: ~TStack()
-{
-  if (mas != NULL)
-    delete[] mas;
-  top = 0;
-  size = 0;
 }
 
 template <class T>
