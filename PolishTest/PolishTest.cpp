@@ -22,7 +22,7 @@ TEST(Polish, can_check_is_operation)
 	EXPECT_EQ(IsOperation('('), true);
 	EXPECT_EQ(IsOperation('.'), false);
 }
-/*
+
 TEST(Polish, can_convert_to_polish)
 {
 	char s[] = "4+5";
@@ -38,7 +38,7 @@ TEST(Polish, can_convert_to_polish)
 	EXPECT_EQ('}', A.Get());
 	EXPECT_EQ('+', A.Get());
 }
-*/
+
 TEST(Polish, can_add)
 {
   char s[] = "5+4";
