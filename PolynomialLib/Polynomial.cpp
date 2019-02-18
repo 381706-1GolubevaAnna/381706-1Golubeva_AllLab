@@ -238,8 +238,8 @@ bool TPolynom::operator==(const TPolynom & P)
 
 TPolynom &TPolynom::operator+=(TMonom &M)
 {
-	if (this->n != M.GetN())
-		throw TException("Error. Different size");
+	/*if (this->n != M.GetN())
+		throw TException("Error. Different size");*/
 	if (M.GetCoeff() == 0)
 		return *this;
 	if (start == 0)
