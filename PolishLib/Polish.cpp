@@ -175,10 +175,10 @@ double Res(TQueue<char> Q)
 		{
 			double B = St.Get(), F = St.Get(), H;
 
-			if (A == '+') H = B + F;
-			if (A == '-') H = B - F;
-			if (A == '*') H = B * F;
-			if (A == '/') H = B / F;
+			if (A == '+') H = F + B;
+			if (A == '-') H = F - B;
+			if (A == '*') H = F * B;
+			if (A == '/') H = F / B;
 			St.Put(H);
 		}
 	}
