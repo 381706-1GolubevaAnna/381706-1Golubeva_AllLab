@@ -334,10 +334,7 @@ TEST(TPolynom, operator_subtract_monomial)
 	TMonom M(3, mas, 4);
 	TMonom M1(3, nmas, 4);
 	P += M;
-	P += M1;
-
-	ASSERT_NO_THROW(P -= M);
-	EXPECT_EQ(1, P.GetSize());
+	ASSERT_NO_THROW(P -= M1);
 }
 
 TEST(TPolynom, can_multiply_equal_polynomials)
