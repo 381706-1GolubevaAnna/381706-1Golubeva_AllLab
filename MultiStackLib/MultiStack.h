@@ -80,7 +80,6 @@ TMStack<T>::~TMStack()
 	for (int i = 0; i < n; i++)
 		delete h[i];
 	delete[] h;
-	delete[] mas;
 	n = 0;
 	size = 0;
 }
