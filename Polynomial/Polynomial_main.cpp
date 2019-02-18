@@ -8,7 +8,7 @@ int main()
         int mas3[] = { 4, 9, 5 };
         int mas4[] = { 5, 1, 3 };
 
-	TMonom M1(3, mas1, 2),  M2(3, m2as, 1), M3(3, mas3, 4),  M4(3, mas4, 8); 
+	TMonom M1(3, mas1, 2),  M2(3, mas2, 1), M3(3, mas3, 4),  M4(3, mas4, 8); 
 
 	cout << "\tMonomial 1: " << M1 << "\n";
 	cout << "\tMonomial 2: " << M2 << "\n";
