@@ -18,7 +18,7 @@ public:
 	TPolynom operator+(TPolynom &P);
 	TPolynom operator-(TPolynom &P);
 	TPolynom operator*(TPolynom &P);
-	TPolynom &operator=(TPolynom &P);
+	TPolynom &operator=(const TPolynom &P);
 	TPolynom &operator+=(TMonom &M);
 	TPolynom &operator-=(TMonom &M);
 	bool operator==(const TPolynom &P);
