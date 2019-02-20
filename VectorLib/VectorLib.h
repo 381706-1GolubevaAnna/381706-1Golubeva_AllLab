@@ -16,7 +16,7 @@ public:
   bool operator==(const TVector<T> &v) const;
   bool operator!=(const TVector<T> &v) const;
   TVector& operator=(const TVector<T> &v);
-  T& operator [](int n);
+  virtual T& operator [](int n);
   int GetSize();
   TVector operator++();
   TVector operator++(int); 
