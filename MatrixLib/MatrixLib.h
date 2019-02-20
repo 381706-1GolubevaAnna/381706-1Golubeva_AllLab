@@ -38,7 +38,7 @@ TMatrix<T> ::TMatrix(int n) : TVector<TVector<T> >(n)
   else
   {
     for (int i = 0; i < n; i++)
-      this->vector[i] = TVector <T>(n - i);
+      this->vector[i] = TVector <T>(n);
   }
 }
 
