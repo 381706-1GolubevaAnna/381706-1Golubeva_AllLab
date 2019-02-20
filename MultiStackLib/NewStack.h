@@ -33,7 +33,7 @@ TNewStack<T>::TNewStack(TNewStack<T>& A)
 {
 	TStack<T>::size = A.size;
 	TStack<T>::top = A.top;
-	/*TStack<T>::mas = A.mas;*/
+	TStack<T>::mas = A.mas;
 }
 
 template <class T>
