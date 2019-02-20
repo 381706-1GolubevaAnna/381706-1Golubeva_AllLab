@@ -19,7 +19,7 @@ int main()
       for (int i = 0; i < 5; i++)
 	for (int j = 0; j < 5 - i; j++) 
 	{
-	  A[i][j] = i + j;
+	  A[i][j] = (i + 1) * (j + 1);
 	 
 	}
     cout << A[2];
