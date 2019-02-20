@@ -25,7 +25,7 @@ public:
 template <class T>
 TVector<T>& TMatrix<T>::operator[](int i)
 {
-	if ((i>=0)&& (i<this->size))
+	if ((i>=0)||(i<this->size))
 			return this->vector[i];
 		else throw TException("Error");
 
