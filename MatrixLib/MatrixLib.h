@@ -11,7 +11,7 @@ public:
   TMatrix(const TMatrix<T> &A);
   TMatrix(const TVector<TVector<T> > &A);
   TVector<T>& operator [] (int i);
-  TVector<T>& operator [] (int i, int j);
+  T& operator [] (int i, int j);
   TMatrix<T>& operator=(TVector<TVector<T> > &A);
   TMatrix operator +(TMatrix<T> &A);
   TMatrix operator -(TMatrix<T> &A);
