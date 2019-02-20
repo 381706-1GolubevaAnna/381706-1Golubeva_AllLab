@@ -38,7 +38,7 @@ TMatrix<T> ::TMatrix(int n) : TVector<TVector<T> >(n)
   else
   {
     for (int i = 0; i < n; i++)
-      this->vector[i] = TVector <T>(n);
+      this->vector[i] = TVector <T>(n-i);
   }
 }
 
@@ -146,9 +146,9 @@ template <class FriendT>
 ostream & operator<<(ostream &ostr, const TMatrix<FriendT> &A)
 {
   for (int i = 0; i < A.size; i++)
-  {/*
+  {
     for (int j = 0; j < i; j++)
-      ostr << "\t";*/
+      ostr << "\t";
     ostr << A.vector[i] << endl;
    }
    return ostr;
