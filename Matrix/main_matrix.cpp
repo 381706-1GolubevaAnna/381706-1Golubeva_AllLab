@@ -29,7 +29,7 @@ int main()
 	  cout<<"B[1]="<< B[1]<<endl;
     cout << "B" <<endl;
     cout << B << endl; 
-    cout<< "B[1][0] = "<< B[1][0]<<endl;
+    cout<< "B[1][1] = "<< B[1][1]<<endl;
   }
   /*
     res = A + B;
