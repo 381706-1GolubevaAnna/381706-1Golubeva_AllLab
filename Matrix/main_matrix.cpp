@@ -13,7 +13,6 @@ int main()
 	  */
     B[0][0] = 4;
     B[0][1] = 3;
-    B[1][0] = 5;
     B[1][1] = 3;  
  
       for (int i = 0; i < 5; i++)
@@ -26,8 +25,12 @@ int main()
     cout<<endl;
     cout << "A\n";
     cout << A << endl;
-    cout << "B";
-    cout << B << endl; }
+    cout << "B" <<endl;
+    cout << B << endl; 
+	  cout<<B[1][0];
+	TMatrix <int> M(2);
+	cout << "M[1][0] = " << M[1][0] << endl;
+  }
   /*
     res = A + B;
     cout << "A + B" << endl << res << endl;
