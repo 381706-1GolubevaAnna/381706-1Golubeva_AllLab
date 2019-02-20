@@ -27,7 +27,7 @@ int main()
     cout << A << endl;
     cout << "B" <<endl;
     cout << B << endl; 
-	  cout<<B[1][0];
+	  cout<< "B[1][0] = " B[1][0]<<endl;
 	TMatrix <int> M(2);
 	cout << "M[1][0] = " << M[1][0] << endl;
   }
