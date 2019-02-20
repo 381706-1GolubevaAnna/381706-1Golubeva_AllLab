@@ -146,9 +146,9 @@ template <class FriendT>
 ostream & operator<<(ostream &ostr, const TMatrix<FriendT> &A)
 {
   for (int i = 0; i < A.size; i++)
-  {
+  {/*
     for (int j = 0; j < i; j++)
-      ostr << "\t";
+      ostr << "\t";*/
     ostr << A.vector[i] << endl;
    }
    return ostr;
