@@ -71,6 +71,7 @@ TMStack<T>::TMStack(TMStack &A)
 			h[i] = new TNewStack<T>(*A.h[i]);
 			h[i]->SetMas(p[i], k[i]);
 		}
+		delete[] p;
 	}
 }
 
