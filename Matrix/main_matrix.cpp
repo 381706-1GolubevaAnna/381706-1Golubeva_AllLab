@@ -25,10 +25,11 @@ int main()
     cout<<endl;
     cout << "A\n";
     cout << A << endl;
+	  cout<<"B[0]="<<B[0]<<endl;
+	  cout<<"B[1]="<< B[1]<<endl;
     cout << "B" <<endl;
     cout << B << endl; 
     cout<< "B[1][0] = "<< B[1][0]<<endl;
-	  cout<< B[1];
   }
   /*
     res = A + B;
