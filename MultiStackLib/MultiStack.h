@@ -77,9 +77,13 @@ TMStack<T>::TMStack(TMStack &A)
 template <class T>
 TMStack<T>::~TMStack()
 {
+	if(h!=NULL)
+	{
 	for (int i = 0; i < n; i++)
 		delete h[i];
 	delete[] h;
+	}
+	if(mas!=NULL)
 	delete[] mas;
 	n = 0;
 	size = 0;
