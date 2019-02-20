@@ -11,6 +11,7 @@ public:
   TMatrix(const TMatrix<T> &A);
   TMatrix(const TVector<TVector<T> > &A);
   TVector<T>& operator [] (int i);
+  TVector<T>& operator [] (int i, int j);
   TMatrix<T>& operator=(TVector<TVector<T> > &A);
   TMatrix operator +(TMatrix<T> &A);
   TMatrix operator -(TMatrix<T> &A);
@@ -30,6 +31,17 @@ TVector<T>& TMatrix<T>::operator[](int i)
 		else throw TException("Error");
 
 }
+
+template <class T>
+T& TMatrix<T>::operator[](int i, int j)
+{
+	if (j > 0)
+		return (*this)[i][j-1];
+	else if (j == 0)
+		return (*this)[i][j];
+	else throw TException("Error");
+}
+
 template <class T>
 TMatrix<T> ::TMatrix(int n) : TVector<TVector<T> >(n)
 {
