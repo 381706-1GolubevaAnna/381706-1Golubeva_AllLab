@@ -15,7 +15,7 @@ protected:
 
 public:
 	TMStack(int _n, int _size);
-	TMStack(TMStack &A);
+	/*TMStack(TMStack &A);*/
 	~TMStack();
 	int GetSize();
 	T Get(int _n);
@@ -41,7 +41,7 @@ TMStack<T>::TMStack(int _n, int _size)
 	for (int i = 1; i < n; i++)
 		h[i] = new TNewStack<T>(A[i], &mas[A[0]] + ((i - 1)*A[i]));
 }
-
+/*
 template <class T>
 TMStack<T>::TMStack(TMStack &A)
 {
@@ -74,7 +74,7 @@ TMStack<T>::TMStack(TMStack &A)
 		delete[] p;
 	}
 }
-
+*/
 template <class T>
 TMStack<T>::~TMStack()
 {
