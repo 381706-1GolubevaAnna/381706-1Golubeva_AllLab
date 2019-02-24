@@ -37,10 +37,10 @@ TEST(Matrix, can_add_matrices)
 	TMatrix <int> m1(2), m2(2), m(2);
 	m1[0][0] = 1;
 	m1[0][1] = 2;
-	m1[1][1] = 4;
+	m1[1][0 = 4;
 	m2[0][0] = 5;
 	m2[0][1] = 6;
-	m2[1][1] = 8;
+	m2[1][0] = 8;
 	for (int i = 0; i < 2; i++)
 	{
 		for (int j = 0; j < 2; j++)
@@ -60,10 +60,10 @@ TEST(Matrix, can_subtract_matrices)
 	TMatrix <int> m1(2), m2(2), m(2);
 	m1[0][0] = 1;
 	m1[0][1] = 2;
-	m1[1][1] = 4;
+	m1[1][0] = 4;
 	m2[0][0] = 5;
 	m2[0][1] = 6;
-	m2[1][1] = 8;
+	m2[1][0] = 8;
 	for (int i = 0; i < 2; i++)
 	{
 		for (int j = 0; j < 2; j++)
@@ -127,7 +127,7 @@ TEST(Matrix, equality_matrix_true)
 {
 	TMatrix <int> m1(2), m2(2);
 	for (int i = 0; i < m1.GetSize(); i++)
-		for (int j = 0; j < m1.GetSize() - i; j++)
+		for (int j = i; j < m1.GetSize() - i; j++)
 		{
 			m1[i][j] = i;
 			m2[i][j] = i;
