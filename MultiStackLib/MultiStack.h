@@ -79,12 +79,13 @@ TMStack<T>::~TMStack()
 {
 	
 	for (int i = 0; i < n; i++)
+	{
 		if (h[i]!=NULL)
 		{
 		delete h[i];	
 		}
-	delete [] h;	
 	}
+	delete [] h;	
 	n = 0;
 	size = 0;
 }
