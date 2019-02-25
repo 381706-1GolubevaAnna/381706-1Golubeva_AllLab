@@ -89,6 +89,7 @@ TMStack<T>::~TMStack()
 	h=NULL;
 	}
 	delete [] mas;
+	mas = NULL;
 	n = 0;
 	size = 0;
 }
