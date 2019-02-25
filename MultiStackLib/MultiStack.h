@@ -85,7 +85,6 @@ TMStack<T>::~TMStack()
 		}
 	delete [] h;	
 	}
-	delete [] mas;
 	n = 0;
 	size = 0;
 }
