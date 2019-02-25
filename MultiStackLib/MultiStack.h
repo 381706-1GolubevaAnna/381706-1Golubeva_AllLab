@@ -80,11 +80,17 @@ TMStack<T>::~TMStack()
 	if(h!=NULL)
 	{
 	for (int i = 0; i < n; i++)
-		if (h[i]!=NULL) delete h[i];
+		if (h[i]!=NULL)
+		{
+			delete h[i];
+			h[i]=NULL;
+		}
 	delete[] h;
+	h=NULL;
 	}
 	if(mas!=NULL)
 	delete[] mas;
+	mas=NULL;
 	n = 0;
 	size = 0;
 }
