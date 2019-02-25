@@ -4,7 +4,7 @@
 
 TEST(MStack, can_create_multistack)
 {
-	ASSERT_NO_THROW(TMStack<int> MStack(3, 4));
+	ASSERT_NO_THROW(TMStack<int> MStack(5, 7));
 }
 
 TEST(MStack, throws_when_create_stack_with_negative_length)
