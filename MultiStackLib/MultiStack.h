@@ -85,7 +85,6 @@ TMStack<T>::~TMStack()
 			delete h[i];
 			h[i]=NULL;
 		}
-	delete[] h;
 	h=NULL;
 	}
 	if(mas!=NULL)
