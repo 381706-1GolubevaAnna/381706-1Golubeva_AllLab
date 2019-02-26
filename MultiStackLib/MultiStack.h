@@ -27,8 +27,13 @@ public:
 template <class T>
 TMStack<T>::TMStack(int _n, int _size)
 {
-	if (_n <= 0 || _size <= 0)
+	if (_n < 0 || _size < 0)
 		throw TException("Error.Negative leight.");
+	if (size == 0)
+	{
+		mas = NULL;
+		h = NULL;
+	}
 	n = _n;
 	size = _size;
 	h = new TNewStack<T>*[n];
