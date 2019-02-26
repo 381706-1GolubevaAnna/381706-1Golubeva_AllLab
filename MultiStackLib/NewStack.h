@@ -59,9 +59,9 @@ int TNewStack<T>::GetTop()
 template <class T>
 TNewStack<T>::~TNewStack()
 {
- /* TStack<T>::top = 0;
+  TStack<T>::top = 0;
   TStack<T>::size = 0;
-  delete[] TStack<T>::mas;*/
+  delete[] TStack<T>::mas;
 }
 
 template <class T>
