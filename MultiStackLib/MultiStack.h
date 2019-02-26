@@ -87,7 +87,7 @@ TMStack<T>::~TMStack()
 	{
 		if (h[i]!=NULL)
 		{
-		delete h[i];	
+		delete[] h[i];	
 		}
 	}
 	if (h!=NULL)
