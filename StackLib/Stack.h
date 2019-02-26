@@ -13,7 +13,7 @@ class TStack
   public:
   TStack(int n = 0);
   TStack(TStack<T> &st);
-  virtual ~TStack();
+ /* virtual ~TStack();*/
   void Put(T a);
   T Get();
   bool IsFull();
@@ -56,7 +56,7 @@ TStack <T> ::TStack(TStack <T> &st)
     mas[i] = st.mas[i];
   }
 }
-
+/*
 template<class T>
 TStack <T> :: ~TStack()
 {
@@ -65,7 +65,7 @@ TStack <T> :: ~TStack()
   top = 0;
   size = 0;
 }
-
+*/
 template <class T>
 void TStack<T> ::Put(T a)
 {
