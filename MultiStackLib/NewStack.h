@@ -15,7 +15,7 @@ public:
 	void Put(T _A);
 	int GetSize();
 	int GetTop();
-	~TNewStack();
+	virtual ~TNewStack();
 };
 
 template <class T>
