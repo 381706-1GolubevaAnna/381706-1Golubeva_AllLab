@@ -90,11 +90,10 @@ TMStack<T>::~TMStack()
 		delete h[i];	
 		}
 	}
-	/*if (h!=NULL)
+	if (h!=NULL)
 	delete [] h;
 	if (mas!=NULL)
 	delete[] mas;
-	*/
 	n = 0;
 	size = 0;
 }
