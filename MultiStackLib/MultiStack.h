@@ -85,8 +85,8 @@ TMStack<T>::~TMStack()
 	
 	for (int i = 0; i < n; i++)
 	{
-		TNewStack<T>* temp = h[i];
-		delete temp;
+		delete h[i];
+		h[i]=NULL;
 	}
 	if (h!=NULL)
 	{
