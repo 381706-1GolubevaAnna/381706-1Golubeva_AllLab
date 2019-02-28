@@ -6,8 +6,8 @@ int main()
   try
   {
     TMatrix<int> A(2), B(2), res(2);
-    for (i = 0; i < 2; i++)
-	  for (j = 0; j < 2 - i; j++) 
+    for (int i = 0; i < 2; i++)
+	  for (int j = 0; j < 2 - i; j++) 
 	  {
 	  A[i][j] = 1;
 	  B[i][j] = 4;
