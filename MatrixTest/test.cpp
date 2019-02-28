@@ -32,7 +32,6 @@ TEST(Matrix, can_assign_matrix)
   ASSERT_TRUE(m1 == m2);
 }
 
-
 TEST(Matrix, equality_matrix_true)
 {
 	TMatrix <int> m1(2), m2(2);
@@ -84,18 +83,14 @@ TEST(TMatrix, inequality_matrix_false)
 
 	ASSERT_FALSE(m1 != m2);
 }
-
 TEST(Matrix, can_add_matrices)
 {
-  TMatrix<int> m1(3);
-  TMatrix<int> m2(3);
-  TMatrix<int> m3(3);
-
-  m1[0][1] = 1;
-  m2[0][1] = 1;
-  m3[0][1] = 2;
-
-  EXPECT_EQ(m3, m1 + m2);
+	TMatrix <int> m1(2), m2(2), m(2);
+	m1[0][1] = 1;
+        m2[0][1] = 2;
+        m[0][1] = 3;
+	
+	ASSERT_TRUE(m == (m1 + m2));
 }
 
 TEST(Matrix, thorws_when_add_matrices_with_different_size)
@@ -106,15 +101,12 @@ TEST(Matrix, thorws_when_add_matrices_with_different_size)
 
 TEST(Matrix, can_subtract_matrices)
 {
-	TMatrix <int> m1(3);
-	TMatrix <int> m2(3);
-	TMatrix <int> m3(3);
-
-	m1[1][2] = 2;
-	m2[1][2] = 1;
-	m3 = m1 - m2;
-
-	EXPECT_EQ(m3[1][2], 1);
+	TMatrix <int> m1(2), m2(2), m(2);
+	m1[0][1] = 3;
+        m2[0][1] = 2;
+        m[0][1] = 1;
+	
+	ASSERT_TRUE(m == (m1 + m2));
 }
 
 
