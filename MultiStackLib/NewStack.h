@@ -15,7 +15,6 @@ public:
 	void Put(T _A);
 	int GetSize();
 	int GetTop();
-	virtual ~TNewStack();
 };
 
 template <class T>
@@ -54,14 +53,6 @@ template <class T>
 int TNewStack<T>::GetTop()
 {
 	return TStack<T>::top;
-}
-
-template <class T>
-TNewStack<T>::~TNewStack()
-{
-  TStack<T>::top = 0;
-  TStack<T>::size = 0;
-  delete[] TStack<T>::mas;
 }
 
 template <class T>
