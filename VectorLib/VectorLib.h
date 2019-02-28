@@ -16,7 +16,6 @@ public:
   bool operator==(const TVector<T> &v) const;
   bool operator!=(const TVector<T> &v) const;
   TVector& operator=(const TVector<T> &v);
-  T& operator [](int n);
   int GetSize();
   TVector operator++();
   TVector operator++(int); 
@@ -92,16 +91,6 @@ TVector<T> & TVector<T> ::operator =(const TVector<T> &v)
 for (int i = 0; i < size; i++)
 	(*this)[i] = v.vector[i];
 return *this;
-}
-
-template <class T>
-T& TVector<T> :: operator [](int n)
-{
-  if (n >= 0 || n < size)
-    return vector[n];
-  else   
-    throw TException("Error. Out of range.");
-
 }
 
 template <class T>
