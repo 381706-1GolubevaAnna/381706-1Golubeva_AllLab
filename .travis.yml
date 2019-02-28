@@ -8,6 +8,7 @@ before_script:
 script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
+  - ./Matrix/Matrix
   - ./VectorTest/VectorTest
   - ./MatrixTest/MatrixTest
 notifications:
