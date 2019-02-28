@@ -91,9 +91,9 @@ TEST(Matrix, can_add_matrices)
   TMatrix<int> m2(3);
   TMatrix<int> m3(3);
 
-  m1[1][1] = 1;
-  m2[1][1] = 1;
-  m3[1][1] = 2;
+  m1[0][1] = 1;
+  m2[0][1] = 1;
+  m3[0][1] = 2;
 
   EXPECT_EQ(m3, m1 + m2);
 }
@@ -156,11 +156,9 @@ TEST(TMatrix, can_divide_matrix)
 	m1[0][0] = 1;
 	m1[0][1] = 2;
 	m1[1][0] = 1;
-
 	m2[0][0] = 1;
 	m2[0][1] = 1;
 	m2[1][0] = 1;
-
 	m[0][0] = 1;
 	m[0][1] = 1;
 	m[1][0] = 1;
