@@ -13,6 +13,7 @@ public:
   TVector<T>(int size = 0);
   TVector<T>(const TVector<T> &v);
   virtual ~TVector<T>();
+  virtual T& operator[](int i);    
   bool operator==(const TVector<T> &v) const;
   bool operator!=(const TVector<T> &v) const;
   TVector& operator=(const TVector<T> &v);
@@ -206,6 +207,15 @@ TVector<T> TVector<T> ::operator--(int)
     vector[i] = vector[i] - 1;
   return temp;
 }
+
+template <class T>
+T& TVector<T>::operator[](int i)
+{
+	if (i >= 0 && i < size)
+		return vector[i];
+	else
+		throw TException("Size is uncorrect");
+} 
 template<class FriendT>
 istream & operator >>(std::istream &istr, TVector<FriendT> &v)
 {
