@@ -13,8 +13,7 @@ int main()
 	  B[i][j] = 4;
 
 	  }
-	
-	  }
+
     res = A + B;
     cout << "A + B" << endl << res << endl;
 
