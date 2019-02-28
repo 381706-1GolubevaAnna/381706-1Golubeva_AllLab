@@ -5,13 +5,14 @@ int main()
 {
   try
   {
-    TMatrix<int> A(5), B(5), res(5);
-     int i,j;
-    for (i = 0; i < 5; i++)
-	  for (j = 0; j < 5 - i; j++) 
+    TMatrix<int> A(2), B(2), res(2);
+    for (i = 0; i < 2; i++)
+	  for (j = 0; j < 2 - i; j++) 
 	  {
-	  A[i][j] = i * (j + 1);
-	  B[i][j] = i * 5 + j * 4;
+	  A[i][j] = 1;
+	  B[i][j] = 4;
+
+	  }
 	
 	  }
     res = A + B;
