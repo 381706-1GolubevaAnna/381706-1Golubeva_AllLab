@@ -8,7 +8,6 @@ before_script:
 script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
-  - ./VectorTest/VectorTest
-  - ./MatrixTest/MatrixTest
+  - ./ListTest/ListTest
 notifications:
   email: false
