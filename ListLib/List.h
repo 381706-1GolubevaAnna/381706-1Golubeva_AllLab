@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Elem.h"
-#include "Exception.h"
+#include "../Exception/Exception.h"
 
 using namespace std;
 
@@ -246,4 +246,3 @@ bool TList<T>::IsEmpty()
 		return true;
 	return false;
 }
-
