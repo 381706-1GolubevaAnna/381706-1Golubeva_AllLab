@@ -8,7 +8,6 @@ before_script:
 script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
-  - ./Polynomial/Polynomial
-  - ./PolynomialTest/PolynomialTest
+  - ./StackListTest/StackListTest
 notifications:
   email: false
