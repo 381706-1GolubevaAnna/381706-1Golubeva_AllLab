@@ -24,3 +24,4 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/PolynomialLib)
 add_subdirectory(Polynomial)
 add_subdirectory(PolynomialLib)
 add_subdirectory(PolynomialTest)
+
