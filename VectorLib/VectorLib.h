@@ -231,3 +231,4 @@ ostream & operator <<(std::ostream &ostr,const TVector<FriendT> &v)
     ostr << v.vector[i] <<"\t";
   return ostr;
 }
+
