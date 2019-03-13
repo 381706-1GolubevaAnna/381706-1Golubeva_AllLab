@@ -31,13 +31,3 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ListLib)
 add_subdirectory(List)
 add_subdirectory(ListLib)
 add_subdirectory(ListTest)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/VectorLib)
-add_subdirectory(Vector)
-add_subdirectory(VectorLib)
-add_subdirectory(VectorTest)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/MatrixLib)
-add_subdirectory(Matrix)
-add_subdirectory(MatrixLib)
-add_subdirectory(MatrixTest)
