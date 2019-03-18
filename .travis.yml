@@ -8,6 +8,14 @@ before_script:
 script:
   - cmake ../381706-1Golubeva_AllLab
   - make -j
+  - ./VectorTest/VectorTest
+  - ./MatrixTest/MatrixTest
+  - ./ArrayListTests/ArrayListTests
+  - ./ListTest/ListTest
   - ./MultiStackTest/MultiStackTest
+  - ./PolishTest/PolishTest
+  - ./PolynomialTest/PolynomialTest
+  - ./QueueTest/QueueTest
+  - ./StackListTest/StackListTest
 notifications:
   email: false
