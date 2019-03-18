@@ -14,3 +14,4 @@ int main()
     cout << " = " << Res(B) << endl;
     return 0;
 }
+
