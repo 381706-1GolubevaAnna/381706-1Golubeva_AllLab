@@ -91,4 +91,3 @@ void TQueue<T>::PrintQueue()
     cout << "\t" << TStack<T>::mas[i];
   }
 }
-© 2019 GitHub, Inc.
