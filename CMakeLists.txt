@@ -80,6 +80,11 @@ add_subdirectory(List)
 add_subdirectory(ListLib)
 add_subdirectory(ListTest)
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/StackListLib)
+add_subdirectory(StackList)
+add_subdirectory(StackListLib)
+add_subdirectory(StackListTest)
+
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/PolishLib)
 add_subdirectory(PolishLib) 
 add_subdirectory(Polish) 
