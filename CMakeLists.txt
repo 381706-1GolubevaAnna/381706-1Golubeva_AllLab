@@ -33,4 +33,5 @@ add_subdirectory(StackLib)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/PolishLib)
 add_subdirectory(PolishLib) 
 add_subdirectory(Polish) 
-add_subdirectory(PolishTest) 
+add_subdirectory(PolishTest)
+
