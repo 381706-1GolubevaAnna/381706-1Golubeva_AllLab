@@ -5,6 +5,11 @@ project(${PROJECT_NAME}) # Название проекта
 
 set(Exception Exception)
 
+
+set(Table Table)
+set(TableLib TableLib)
+set(TableTest TableTest)
+
 set(Vector Vector)
 set(VectorLib VectorLib)
 set(VectorTest VectorTest)
@@ -54,6 +59,11 @@ add_subdirectory(gtest)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Exception)
 add_subdirectory(Exception)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/TableLib)
+add_subdirectory(Table)
+add_subdirectory(TableLib)
+add_subdirectory(TAbleTest)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/VectorLib)
 add_subdirectory(Vector)
