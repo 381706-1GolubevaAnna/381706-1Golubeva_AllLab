@@ -17,5 +17,6 @@ script:
   - ./PolynomialTest/PolynomialTest
   - ./QueueTest/QueueTest
   - ./StackListTest/StackListTest
+  - ./TableTest/TableTest
 notifications:
   email: false
